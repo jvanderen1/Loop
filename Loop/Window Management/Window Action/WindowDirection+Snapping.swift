@@ -17,50 +17,74 @@ extension WindowDirection {
         var newDirection: WindowDirection = .noAction
 
         if mouseLocation.x < ignoredFrame.minX {
-            newDirection = WindowDirection.processLeftSnap(mouseLocation, screenFrame)
+            newDirection = processSideSnap(mouseLocation, screenFrame, currentDirection, isLeft: true)
         } else if mouseLocation.x > ignoredFrame.maxX {
-            newDirection = WindowDirection.processRightSnap(mouseLocation, screenFrame)
+            newDirection = processSideSnap(mouseLocation, screenFrame, currentDirection, isLeft: false)
         } else if mouseLocation.y < ignoredFrame.minY {
-            newDirection = WindowDirection.processTopSnap(mouseLocation, screenFrame)
+            newDirection = processTopSnap(mouseLocation, screenFrame)
         } else if mouseLocation.y > ignoredFrame.maxY {
-            newDirection = WindowDirection.processBottomSnap(mouseLocation, screenFrame, currentDirection)
+            newDirection = processBottomSnap(mouseLocation, screenFrame, currentDirection)
         }
 
         return newDirection
     }
 
-    private static func processLeftSnap(
-        _ mouseLocation: CGPoint,
-        _ screenFrame: CGRect
+    private static func processThirdsSnapping(
+        mousePos: CGFloat,
+        maxPos: CGFloat,
+        totalLength: CGFloat,
+        currentDirection: WindowDirection,
+        firstThird: WindowDirection,
+        secondThird: WindowDirection,
+        firstTwoThirds: WindowDirection,
+        secondTwoThirds: WindowDirection,
+        defaultHalf: WindowDirection
     ) -> WindowDirection {
-        let mouseY = mouseLocation.y
-        let maxY = screenFrame.maxY
-        let height = screenFrame.height
-
-        if mouseY < maxY - (height * 7 / 8) {
-            return .topLeftQuarter
+        if mousePos < maxPos - (totalLength * 2 / 3) {
+            return firstThird
+        } else if mousePos > maxPos - (totalLength * 1 / 3) {
+            return secondThird
+        } else {
+            if currentDirection == firstThird || currentDirection == firstTwoThirds {
+                return firstTwoThirds
+            } else if currentDirection == secondThird || currentDirection == secondTwoThirds {
+                return secondTwoThirds
+            }
+            return defaultHalf
         }
-        if mouseY > maxY - (height * 1 / 8) {
-            return .bottomLeftQuarter
-        }
-        return .leftHalf
     }
 
-    private static func processRightSnap(
+    private static func processSideSnap(
         _ mouseLocation: CGPoint,
-        _ screenFrame: CGRect
+        _ screenFrame: CGRect,
+        _ currentDirection: WindowDirection,
+        isLeft: Bool
     ) -> WindowDirection {
         let mouseY = mouseLocation.y
         let maxY = screenFrame.maxY
         let height = screenFrame.height
 
+        if height > screenFrame.width {
+            return processThirdsSnapping(
+                mousePos: mouseY,
+                maxPos: maxY,
+                totalLength: height,
+                currentDirection: currentDirection,
+                firstThird: .topThird,
+                secondThird: .bottomThird,
+                firstTwoThirds: .topTwoThirds,
+                secondTwoThirds: .bottomTwoThirds,
+                defaultHalf: isLeft ? .leftHalf : .rightHalf
+            )
+        }
+
         if mouseY < maxY - (height * 7 / 8) {
-            return .topRightQuarter
+            return isLeft ? .topLeftQuarter : .topRightQuarter
         }
         if mouseY > maxY - (height * 1 / 8) {
-            return .bottomRightQuarter
+            return isLeft ? .bottomLeftQuarter : .bottomRightQuarter
         }
-        return .rightHalf
+        return isLeft ? .leftHalf : .rightHalf
     }
 
     private static func processTopSnap(
@@ -82,27 +106,16 @@ extension WindowDirection {
         _ screenFrame: CGRect,
         _ currentDirection: WindowDirection
     ) -> WindowDirection {
-        var newDirection: WindowDirection
-
-        let mouseX = mouseLocation.x
-        let maxX = screenFrame.maxX
-        let width = screenFrame.width
-
-        if mouseX < maxX - (width * 2 / 3) {
-            newDirection = .leftThird
-        } else if mouseX > maxX - (width * 1 / 3) {
-            newDirection = .rightThird
-        } else {
-            // mouse is within 1/3 and 2/3 of the screen's width
-            newDirection = .bottomHalf
-
-            if currentDirection == .leftThird || currentDirection == .leftTwoThirds {
-                newDirection = .leftTwoThirds
-            } else if currentDirection == .rightThird || currentDirection == .rightTwoThirds {
-                newDirection = .rightTwoThirds
-            }
-        }
-
-        return newDirection
+        return processThirdsSnapping(
+            mousePos: mouseLocation.x,
+            maxPos: screenFrame.maxX,
+            totalLength: screenFrame.width,
+            currentDirection: currentDirection,
+            firstThird: .leftThird,
+            secondThird: .rightThird,
+            firstTwoThirds: .leftTwoThirds,
+            secondTwoThirds: .rightTwoThirds,
+            defaultHalf: .bottomHalf
+        )
     }
 }
