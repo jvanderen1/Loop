@@ -65,17 +65,31 @@ extension WindowDirection {
         let height = screenFrame.height
 
         if height > screenFrame.width {
-            return processThirdsSnapping(
-                mousePos: mouseY,
-                maxPos: maxY,
-                totalLength: height,
-                currentDirection: currentDirection,
-                firstThird: .topThird,
-                secondThird: .bottomThird,
-                firstTwoThirds: .topTwoThirds,
-                secondTwoThirds: .bottomTwoThirds,
-                defaultHalf: isLeft ? .leftHalf : .rightHalf
-            )
+            if mouseY < maxY - (height * 7 / 8) {
+                return isLeft ? .topLeftQuarter : .topRightQuarter
+            }
+            if mouseY > maxY - (height * 1 / 8) {
+                return isLeft ? .bottomLeftQuarter : .bottomRightQuarter
+            }
+            if mouseY < maxY - (height * 2 / 3) {
+                return .topHalf
+            }
+            if mouseY > maxY - (height * 1 / 3) {
+                return .bottomHalf
+            }
+            if mouseY < maxY - (height * 7 / 12) {
+                if currentDirection == .topThird || currentDirection == .topTwoThirds {
+                    return .topTwoThirds
+                }
+                return .topThird
+            }
+            if mouseY > maxY - (height * 5 / 12) {
+                if currentDirection == .bottomThird || currentDirection == .bottomTwoThirds {
+                    return .bottomTwoThirds
+                }
+                return .bottomThird
+            }
+            return .verticalCenterThird
         }
 
         if mouseY < maxY - (height * 7 / 8) {
