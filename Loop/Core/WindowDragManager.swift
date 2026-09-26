@@ -32,13 +32,16 @@ final class WindowDragManager {
     private var determineDraggedWindowTask: Task<(), Never>?
     private var accessibilityCheckerTask: Task<(), Never>?
 
-    /// Whether the current window drag should keep Mission Control from opening.
-    ///
-    /// The drag callback runs on the event-tap thread, while window resolution happens on the
-    /// main actor, so this flag is shared through a lock (same pattern as `LoopManager`).
-    private let shouldSuppressMissionControlOnDrag = OSAllocatedUnfairLock(initialState: false)
-    nonisolated private var isSuppressingMissionControl: Bool {
-        shouldSuppressMissionControlOnDrag.withLock { $0 }
+    /// Whether top-edge rewriting is paused, plus a generation so a lookup that finishes
+    /// after mouse-up cannot pause the next drag.
+    private struct MissionControlSuppression: Sendable {
+        var paused = false
+        var generation = 0
+    }
+
+    private let missionControlSuppression = OSAllocatedUnfairLock(initialState: MissionControlSuppression())
+    nonisolated private var isMissionControlSuppressionPaused: Bool {
+        missionControlSuppression.withLock { $0.paused }
     }
 
     private var currentMousePosition: CGPoint {
@@ -87,9 +90,12 @@ final class WindowDragManager {
                 return Unmanaged.passUnretained(event)
             }
 
-            // If suppress is enabled for this drag, shift the event 1px off the top edge
-            // before it reaches the system (prevents Mission Control without warping the cursor).
-            if isSuppressingMissionControl {
+            // Rewrite before this event is delivered. Mission Control can open on the first
+            // top-edge events, before the dragged window has been resolved, so this is not
+            // delayed until that lookup finishes. Non-window drags pause it below.
+            if !isMissionControlSuppressionPaused,
+               Defaults[.windowSnapping],
+               Defaults[.suppressMissionControlOnTopDrag] {
                 Self.nudgeEventOffTopEdge(event)
             }
 
@@ -121,29 +127,49 @@ final class WindowDragManager {
     /// Keeps Mission Control from opening during a top-edge window snap.
     ///
     /// macOS opens Mission Control when a window drag stays on the top screen edge.
-    /// We rewrite that event so its reported Y is 1px below the edge. Mutating the event
+    /// We rewrite that event so its reported Y is 1pt below the edge. Mutating the event
     /// is smoother than `CGWarpMouseCursorPosition`, which fights the real cursor every frame.
+    ///
+    /// Uses CoreGraphics display bounds because this runs on the event-tap thread, not the main thread.
     private nonisolated static func nudgeEventOffTopEdge(_ event: CGEvent) {
         let location = event.location
-
-        // CGEvent locations use display coordinates (`NSScreen.displayBounds`), not AppKit frames.
-        let screenBounds = NSScreen.screens
-            .map(\.displayBounds)
-            .first { bounds in
-                location.x >= bounds.minX &&
-                    location.x <= bounds.maxX &&
-                    location.y >= bounds.minY &&
-                    location.y <= bounds.maxY
-            } ?? NSScreen.main?.displayBounds
-
-        // Top edge in these coordinates is `minY` (origin is top-left of the main display).
-        guard let bounds = screenBounds, location.y <= bounds.minY else {
+        guard let top = topEdgeY(at: location, displayFrames: activeDisplayFrames()) else {
             return
         }
 
         var adjusted = location
-        adjusted.y = bounds.minY + 1
+        adjusted.y = top + 1
         event.location = adjusted
+    }
+
+    /// Top of the display under `point`, in CoreGraphics coordinates (`minY` is the top edge).
+    ///
+    /// Includes a point sitting up to 1pt past the edge. The cursor is usually clamped onto
+    /// the edge, but some events are reported slightly above it.
+    nonisolated static func topEdgeY(at point: CGPoint, displayFrames: [CGRect]) -> CGFloat? {
+        let topEdges = displayFrames.filter { frame in
+            point.x >= frame.minX && point.x <= frame.maxX &&
+                point.y <= frame.minY && point.y >= frame.minY - 1
+        }
+
+        // More than one display can match on a shared corner. Use the edge nearest the pointer.
+        return topEdges.min(by: {
+            abs($0.minY - point.y) < abs($1.minY - point.y)
+        })?.minY
+    }
+
+    private nonisolated static func activeDisplayFrames() -> [CGRect] {
+        var count: UInt32 = 0
+        guard CGGetActiveDisplayList(0, nil, &count) == .success, count > 0 else {
+            return []
+        }
+
+        var displays = [CGDirectDisplayID](repeating: 0, count: Int(count))
+        guard CGGetActiveDisplayList(count, &displays, &count) == .success else {
+            return []
+        }
+
+        return displays.prefix(Int(count)).map { CGDisplayBounds($0) }
     }
 
     private func leftMouseDragged(event _: CGEvent) {
@@ -177,6 +203,10 @@ final class WindowDragManager {
     }
 
     private func leftMouseUp(_: CGEvent) {
+        // A new drag can start before `resetDragState` runs. Bump the generation now so an
+        // in-flight window lookup cannot pause suppression for that next drag.
+        endMissionControlSuppression()
+
         guard Defaults[.windowSnapping] else {
             return
         }
@@ -206,6 +236,8 @@ final class WindowDragManager {
         }
 
         determineDraggedWindowTask = Task {
+            let generation = missionControlSuppression.withLock { $0.generation }
+
             defer {
                 determineDraggedWindowTask = nil
             }
@@ -214,6 +246,7 @@ final class WindowDragManager {
                   !window.isAppExcluded
             else {
                 didFailToResolveDraggedWindow = true
+                pauseMissionControlSuppression(for: generation)
                 return
             }
 
@@ -226,11 +259,6 @@ final class WindowDragManager {
             await context.refreshResolvedState()
             self.resizeContext = context
 
-            // Enable Mission Control suppression for the rest of this drag when the setting allows it.
-            shouldSuppressMissionControlOnDrag.withLock {
-                $0 = Defaults[.windowSnapping] && Defaults[.suppressMissionControlOnTopDrag]
-            }
-
             log.info("Determined window being dragged: \(window.description)")
         }
     }
@@ -241,7 +269,21 @@ final class WindowDragManager {
         initialWindowFrame = nil
         determineDraggedWindowTask?.cancel()
         determineDraggedWindowTask = nil
-        shouldSuppressMissionControlOnDrag.withLock { $0 = false }
+        endMissionControlSuppression()
+    }
+
+    private func endMissionControlSuppression() {
+        missionControlSuppression.withLock {
+            $0.paused = false
+            $0.generation += 1
+        }
+    }
+
+    private func pauseMissionControlSuppression(for generation: Int) {
+        missionControlSuppression.withLock {
+            guard $0.generation == generation else { return }
+            $0.paused = true
+        }
     }
 
     private func hasWindowMoved(_ windowFrame: CGRect, _ initialFrame: CGRect) -> Bool {
