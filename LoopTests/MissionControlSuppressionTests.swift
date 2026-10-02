@@ -34,12 +34,37 @@ struct MissionControlSuppressionTests {
         #expect(WindowDragManager.topEdgeY(at: CGPoint(x: 100, y: -2), displayFrames: [display]) == nil)
     }
 
-    @Test func usesTheLowerDisplayWhenStackedDisplaysMeet() {
+    @Test func reportsTheSeamBetweenStackedDisplays() {
         let upper = CGRect(x: 0, y: -800, width: 1000, height: 800)
         let lower = CGRect(x: 0, y: 0, width: 1000, height: 800)
 
         // y = 0 is the lower display's top and the upper display's bottom.
         #expect(WindowDragManager.topEdgeY(at: CGPoint(x: 100, y: 0), displayFrames: [upper, lower]) == 0)
+    }
+
+    @Test func rewritesOnlyAfterThePointerWasAlreadyOnTheEdge() {
+        let display = CGRect(x: 0, y: 0, width: 1000, height: 800)
+        var rewrite = MissionControlTopEdgeRewrite()
+
+        let first = rewrite.rewrittenLocation(CGPoint(x: 100, y: 0), displayFrames: [display])
+        let second = rewrite.rewrittenLocation(CGPoint(x: 100, y: 0), displayFrames: [display])
+
+        #expect(first == nil)
+        #expect(second == CGPoint(x: 100, y: 1))
+    }
+
+    @Test func doesNotRewriteASingleCrossingBetweenStackedDisplays() {
+        let upper = CGRect(x: 0, y: -800, width: 1000, height: 800)
+        let lower = CGRect(x: 0, y: 0, width: 1000, height: 800)
+        let frames = [upper, lower]
+        var rewrite = MissionControlTopEdgeRewrite()
+
+        _ = rewrite.rewrittenLocation(CGPoint(x: 100, y: -20), displayFrames: frames)
+        let crossing = rewrite.rewrittenLocation(CGPoint(x: 100, y: 0), displayFrames: frames)
+        let insideLower = rewrite.rewrittenLocation(CGPoint(x: 100, y: 20), displayFrames: frames)
+
+        #expect(crossing == nil)
+        #expect(insideLower == nil)
     }
 
     @Test func usesTheNearestTopEdgeWhenDisplaysShareACorner() {
