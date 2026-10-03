@@ -297,7 +297,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@ n’a pas pu installer la mise à jour dans %2$@ (%3$@). Voulez-vous plutôt installer cette mise à jour dans votre dossier Applications ?"
+            "value" : "%1$@ n’a pas pu installer la mise à jour dans %2$@ (%3$@). Voulez-vous plutôt installer cette mise à jour dans votre dossier Applications ?"
           }
         },
         "it" : {
@@ -309,7 +309,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@ は %2$@（%3$@）でアップデートをインストールできませんでした。代わりにアプリケーションフォルダにインストールしますか？"
+            "value" : "%1$@は%2$@にアップデートをインストールできませんでした（%3$@）。代わりにアプリケーションフォルダにインストールしますか？"
           }
         },
         "ko" : {
@@ -386,7 +386,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ ne se trouve pas dans votre dossier Applications. Voulez-vous installer la mise à jour dans le dossier Applications à la place ?"
+            "value" : "%@ ne se trouve pas dans votre dossier Applications. Voulez-vous installer la mise à jour dans le dossier Applications à la place ?"
           }
         },
         "it" : {
@@ -398,7 +398,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ はアプリケーションフォルダにありません。代わりにアプリケーションフォルダにアップデートをインストールしますか？"
+            "value" : "%@はアプリケーションフォルダにありません。代わりにアプリケーションフォルダにアップデートをインストールしますか？"
           }
         },
         "ko" : {
@@ -474,7 +474,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ place les fenêtres légèrement au-dessus du centre absolu, ce qui peut être jugé plus ergonomique."
+            "value" : "%@ place les fenêtres légèrement au-dessus du centre absolu,\nce qui peut être jugé plus ergonomique."
           }
         },
         "it" : {
@@ -486,7 +486,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ はウィンドウを中央より少し上に配置し、\n使いやすく感じることがあります。"
+            "value" : "%@はウインドウを中央よりやや上に配置するため、\nより使いやすく感じられる場合があります。"
           }
         },
         "ko" : {
@@ -621,6 +621,184 @@
         }
       }
     },
+    "%lld-finger %@" : {
+      "comment" : "Default title describing a gesture. First argument is the finger count, second is the gesture kind name (e.g. '2-finger Pinch' or '3-finger Swipe Right').",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ avec %1$lld doigts"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld本指で%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%1$lld-finger %2$@"
+          }
+        }
+      }
+    },
+    "%lld-finger Swipe or Magnify" : {
+      "comment" : "Default title describing how to activate a radial menu gesture. Argument is the finger count.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer ou zoomer avec %lld doigts"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld本指でスワイプ/ピンチ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld-finger Swipe or Magnify"
+          }
+        }
+      }
+    },
     "A single %@ action can only track one window. To stash\nmultiple windows, add additional %@ actions." : {
       "comment" : "Information in a popover displaying how a stash action can only keep track of a single window. Both %1$@ and %2$@ are replaced with the language's localization of the \"Stash\" action.",
       "localizations" : {
@@ -663,7 +841,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@は 1 つのウィンドウのみ追跡できます。複数をスタッシュ\nするには、別の%2$@アクションを追加してください。"
+            "value" : "1つの%1$@アクションで追跡できるウインドウは1つだけです。\n複数のウインドウをスタッシュするには、別の%2$@アクションを追加してください。"
           }
         },
         "ko" : {
@@ -740,7 +918,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opacité de l’accent"
+            "value" : "Opacité de la couleur d’accentuation"
           }
         },
         "it" : {
@@ -752,7 +930,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "テーマカラー不透明度"
+            "value" : "アクセントカラーの不透明度"
           }
         },
         "ko" : {
@@ -828,7 +1006,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Accès à l'accessibilité"
+            "value" : "Accès d’accessibilité"
           }
         },
         "it" : {
@@ -840,7 +1018,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アクセシビリティアクセス"
+            "value" : "アクセシビリティのアクセス権"
           }
         },
         "ko" : {
@@ -916,7 +1094,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Veuillez accorder l'accès pour pouvoir redimensionner les fenêtres."
+            "value" : "Veuillez accorder l’accès pour pouvoir redimensionner les fenêtres."
           }
         },
         "it" : {
@@ -928,7 +1106,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウィンドウのサイズを変更できるようにするには、アクセスを許可してください。"
+            "value" : "ウインドウのサイズを変更できるようにするには、アクセスを許可してください。"
           }
         },
         "ko" : {
@@ -1004,7 +1182,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ nécessite des autorisations d'accessibilité"
+            "value" : "%@ nécessite des autorisations d’accessibilité"
           }
         },
         "it" : {
@@ -1016,7 +1194,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ にはアクセシビリティの許可が必要です"
+            "value" : "%@にはアクセシビリティのアクセス権が必要です"
           }
         },
         "ko" : {
@@ -1271,7 +1449,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autorisation de l'administrateur requise"
+            "value" : "Autorisation de l’administrateur requise"
           }
         },
         "it" : {
@@ -1549,7 +1727,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "常にサイクルを最初の項目から開始する"
+            "value" : "常にサイクルを最初の項目から開始"
           }
         },
         "ko" : {
@@ -1561,7 +1739,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Start Cycli altijd vanaf de eerste actie"
+            "value" : "Start posities altijd vanaf de eerste positie"
           }
         },
         "pl" : {
@@ -1637,7 +1815,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウィンドウサイズ変更のアニメーション"
+            "value" : "ウインドウサイズ変更のアニメーション"
           }
         },
         "ko" : {
@@ -1801,7 +1979,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitesse d'animation"
+            "value" : "Vitesse d’animation"
           }
         },
         "it" : {
@@ -1813,7 +1991,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アニメーションの早さ"
+            "value" : "アニメーションの速さ"
           }
         },
         "ko" : {
@@ -1860,6 +2038,95 @@
         }
       }
     },
+    "Anywhere" : {
+      "comment" : "Gesture activation zone covers the entire window",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anywhere"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N’importe où"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どこでも"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Anywhere"
+          }
+        }
+      }
+    },
     "App icon is locked" : {
       "localizations" : {
         "ar" : {
@@ -1889,7 +2156,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Verrouillé"
+            "value" : "Verrouillée"
           }
         },
         "it" : {
@@ -1977,7 +2244,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajouter des marges"
+            "value" : "Appliquer des marges"
           }
         },
         "it" : {
@@ -2065,7 +2332,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appliquer le délai d'activation au clic du milieu"
+            "value" : "Appliquer le délai d’activation au clic central"
           }
         },
         "it" : {
@@ -2077,7 +2344,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "中クリックトリガー遅延"
+            "value" : "中クリックにもトリガー遅延を適用"
           }
         },
         "ko" : {
@@ -2125,7 +2392,7 @@
       }
     },
     "Automatically install updates" : {
-      "comment" : "A tooltip displayed when hovering over the toggle.",
+      "comment" : "Label of a toggle in the About settings page that enables automatic installation of updates.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2166,7 +2433,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自動的にアップデートをインストールする"
+            "value" : "自動的にアップデートをインストール"
           }
         },
         "ko" : {
@@ -2390,6 +2657,95 @@
         }
       }
     },
+    "Both" : {
+      "comment" : "Gesture category label: swipe and magnify gestures\nGesture kind: swipe and magnify gestures; opens the radial menu",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Both"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les deux"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "両方"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Both"
+          }
+        }
+      }
+    },
     "Bottom" : {
       "comment" : "Label for a slider in Loop’s padding settings",
       "localizations" : {
@@ -2520,7 +2876,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下部繰り返し"
+            "value" : "下側サイクル"
           }
         },
         "ko" : {
@@ -2597,7 +2953,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Moitié basse"
+            "value" : "Moitié inférieure"
           }
         },
         "it" : {
@@ -2876,7 +3232,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下の画面"
+            "value" : "下のディスプレイ"
           }
         },
         "ko" : {
@@ -2953,7 +3309,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiers bas"
+            "value" : "Tiers inférieur"
           }
         },
         "it" : {
@@ -3219,7 +3575,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Par défaut, Loop reprend les séquences à partir de l'endroit où vous vous êtes arrêté pour la dernière fois dans chaque fenêtre."
+            "value" : "Par défaut, Loop reprend les séquences à partir de l’endroit où vous vous êtes arrêté pour la dernière fois dans chaque fenêtre."
           }
         },
         "it" : {
@@ -3231,7 +3587,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "デフォルトでは、Loop は各ウィンドウで最後にアクションを終了した位置から繰り返しを再開します。"
+            "value" : "デフォルトでは、Loopは各ウインドウで前回の続きからサイクルを再開します。"
           }
         },
         "ko" : {
@@ -3498,7 +3854,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "中央"
+            "value" : "中央に配置"
           }
         },
         "ko" : {
@@ -3674,7 +4030,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アップデートの確認..."
+            "value" : "アップデートを確認…"
           }
         },
         "ko" : {
@@ -3763,7 +4119,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アップデートの確認…"
+            "value" : "アップデートを確認…"
           }
         },
         "ko" : {
@@ -3851,7 +4207,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "キー設定をクリア"
+            "value" : "キー設定を消去"
           }
         },
         "ko" : {
@@ -4106,7 +4462,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Options…"
+            "value" : "Configurer…"
           }
         },
         "it" : {
@@ -4118,7 +4474,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "設定…"
+            "value" : "構成…"
           }
         },
         "ko" : {
@@ -4165,6 +4521,95 @@
         }
       }
     },
+    "Continue the swipe or magnify gesture to step through cycle actions." : {
+      "comment" : "Section footer shown in settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poursuivez le balayage ou le zoom pour parcourir la séquence d’actions."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スワイプ/ピンチを続けると、サイクル内のアクションを順番に切り替えます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continue the swipe or magnify gesture to step through cycle actions."
+          }
+        }
+      }
+    },
     "Contributors on GitHub" : {
       "localizations" : {
         "ar" : {
@@ -4206,7 +4651,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "GitHub の貢献者"
+            "value" : "GitHubの貢献者"
           }
         },
         "ko" : {
@@ -4727,7 +5172,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Personnalisé"
+            "value" : "Personnalisée"
           }
         },
         "it" : {
@@ -4787,7 +5232,7 @@
       }
     },
     "Customize this action's custom frame." : {
-      "comment" : "A help text describing the customization option for a custom-direction action.",
+      "comment" : "Help text on the slider icon next to a gesture action with a custom frame",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4816,7 +5261,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Personnalisez le cadre personnalisé de cette action."
+            "value" : "Personnalisez le cadre de cette action."
           }
         },
         "it" : {
@@ -4875,6 +5320,184 @@
         }
       }
     },
+    "Customize this gesture." : {
+      "comment" : "Help text shown when hovering a gesture configuration button",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customize this gesture."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personnalisez ce geste."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このジェスチャをカスタマイズします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture."
+          }
+        }
+      }
+    },
+    "Customize this gesture's action." : {
+      "comment" : "Help text shown when hovering a gesture's action button",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personnalisez l’action de ce geste."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このジェスチャのアクションをカスタマイズします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this gesture's action."
+          }
+        }
+      }
+    },
     "Customize this keybind's action." : {
       "localizations" : {
         "ar" : {
@@ -4904,7 +5527,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Personnalisez l'action de ce raccourci."
+            "value" : "Personnalisez l’action de ce raccourci."
           }
         },
         "it" : {
@@ -4916,7 +5539,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このキー設定の動作をカスタマイズします。"
+            "value" : "このキー設定のアクションをカスタマイズします。"
           }
         },
         "ko" : {
@@ -4963,8 +5586,97 @@
         }
       }
     },
+    "Customize this radial menu action." : {
+      "comment" : "A tooltip for the radial menu action customization button.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personnalisez cette action du menu radial."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この円形メニューのアクションをカスタマイズします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Customize this radial menu action."
+          }
+        }
+      }
+    },
     "Customize what this action cycles through." : {
-      "comment" : "A description for a button that appears when configuring a cycling window action.",
+      "comment" : "Help text on the cycle icon next to a gesture action that cycles",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5005,7 +5717,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このアクションで繰り返す内容をカスタマイズします。"
+            "value" : "このアクションのサイクル内容をカスタマイズします。"
           }
         },
         "ko" : {
@@ -5094,7 +5806,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "繰り返し"
+            "value" : "サイクル"
           }
         },
         "ko" : {
@@ -5106,7 +5818,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cyclus"
+            "value" : "Positie"
           }
         },
         "pl" : {
@@ -5170,7 +5882,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Reculer dans le cycle avec Maj"
+            "value" : "Reculer dans la séquence avec Maj"
           }
         },
         "it" : {
@@ -5182,7 +5894,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shift を押しながら逆方向に繰り返す"
+            "value" : "Shiftを押しながら逆方向にサイクル"
           }
         },
         "ko" : {
@@ -5194,7 +5906,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cyclus teruggaan met Shift"
+            "value" : "Positie teruggaan met shift"
           }
         },
         "pl" : {
@@ -5259,7 +5971,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Séquence"
+            "value" : "Séquences"
           }
         },
         "it" : {
@@ -5271,7 +5983,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "繰り返し"
+            "value" : "サイクル"
           }
         },
         "ko" : {
@@ -5585,6 +6297,95 @@
         }
       }
     },
+    "Direction" : {
+      "comment" : "Label for the swipe direction picker in the gesture configuration modal",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Direction"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Direction"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方向"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Direction"
+          }
+        }
+      }
+    },
     "Disable cursor interaction" : {
       "localizations" : {
         "ar" : {
@@ -5614,7 +6415,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Désactiver l'interaction du curseur"
+            "value" : "Désactiver l’interaction du curseur"
           }
         },
         "it" : {
@@ -5702,7 +6503,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Voulez-vous fusionner ou effacer les raccourcis existants ?"
+            "value" : "Voulez-vous fusionner ou effacer les raccourcis existants ?"
           }
         },
         "it" : {
@@ -5878,7 +6679,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Double-cliquez pour déclencher"
+            "value" : "Activer par double-clic"
           }
         },
         "it" : {
@@ -5937,6 +6738,95 @@
         }
       }
     },
+    "Down" : {
+      "comment" : "Swipe direction picker option: down",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Down"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bas"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Down"
+          }
+        }
+      }
+    },
     "Enable blur" : {
       "comment" : "Text for enabling the blur effect on the preview.",
       "localizations" : {
@@ -5967,7 +6857,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Flou activé"
+            "value" : "Activer le flou"
           }
         },
         "it" : {
@@ -5979,7 +6869,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ぼかし"
+            "value" : "ぼかしを有効化"
           }
         },
         "ko" : {
@@ -6026,6 +6916,95 @@
         }
       }
     },
+    "Enable trackpad gestures" : {
+      "comment" : "Toggle in gestures settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer les gestes du trackpad"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トラックパッドジェスチャを有効化"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Enable trackpad gestures"
+          }
+        }
+      }
+    },
     "Enable window snapping" : {
       "comment" : "A label for a toggle that enables or disables window snapping. The text is presented as a popover when the toggle is hovered over.",
       "localizations" : {
@@ -6068,7 +7047,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウィンドウスナップを有効化"
+            "value" : "ウインドウスナップを有効化"
           }
         },
         "ko" : {
@@ -6332,7 +7311,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "エクスポート"
+            "value" : "書き出す"
           }
         },
         "ko" : {
@@ -6420,7 +7399,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "キー設定をエクスポート"
+            "value" : "キー設定を書き出す"
           }
         },
         "ko" : {
@@ -6497,7 +7476,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bar externe"
+            "value" : "Barre externe"
           }
         },
         "it" : {
@@ -6598,7 +7577,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "紐付けキー設定を解決できません"
+            "value" : "リンクされたキー設定が見つかりません"
           }
         },
         "ko" : {
@@ -6734,6 +7713,95 @@
         }
       }
     },
+    "Fingers" : {
+      "comment" : "Label for the finger-count stepper in the gesture configuration popover",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fingers"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doigts"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指の本数"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fingers"
+          }
+        }
+      }
+    },
     "First Fourth" : {
       "comment" : "Window action",
       "localizations" : {
@@ -6764,7 +7832,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Premier quatrième"
+            "value" : "Premier quart"
           }
         },
         "it" : {
@@ -7209,7 +8277,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Focaliser sur la pile suivante"
+            "value" : "Focaliser la fenêtre suivante de la pile"
           }
         },
         "it" : {
@@ -7298,7 +8366,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Focaliser vers la droit"
+            "value" : "Focaliser vers la droite"
           }
         },
         "it" : {
@@ -7487,7 +8555,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "リサイズ時にウインドウをフォーカス"
+            "value" : "サイズ変更時にウインドウをフォーカス"
           }
         },
         "ko" : {
@@ -7564,7 +8632,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quatrième quatrième"
+            "value" : "Quatrième quart"
           }
         },
         "it" : {
@@ -7665,7 +8733,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "全画面"
+            "value" : "フルスクリーン"
           }
         },
         "ko" : {
@@ -7801,6 +8869,184 @@
         }
       }
     },
+    "Gesture" : {
+      "comment" : "Label for the magnify gesture picker in the gesture configuration modal",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gesture"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geste"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェスチャ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gesture"
+          }
+        }
+      }
+    },
+    "Gestures" : {
+      "comment" : "Section header shown in gestures settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestures"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェスチャ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        }
+      }
+    },
     "Go Back" : {
       "comment" : "Section header in the action picker of the Keybinds tab",
       "localizations" : {
@@ -7831,7 +9077,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réinitialiser"
+            "value" : "Revenir"
           }
         },
         "it" : {
@@ -8477,7 +9723,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Top Groeien"
+            "value" : "Boven groeien"
           }
         },
         "pl" : {
@@ -8719,7 +9965,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Retour haptique"
+            "value" : "Retour tactile"
           }
         },
         "it" : {
@@ -8731,7 +9977,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ハプティックフィードバック"
+            "value" : "触覚フィードバック"
           }
         },
         "ko" : {
@@ -8896,7 +10142,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cacher"
+            "value" : "Masquer"
           }
         },
         "it" : {
@@ -8984,7 +10230,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Masquer l’icône de la barre de menu"
+            "value" : "Masquer l’icône de la barre des menus"
           }
         },
         "it" : {
@@ -9044,7 +10290,7 @@
       }
     },
     "Hide when no action is selected" : {
-      "comment" : "Toggle label for hiding the radial menu when no action is selected.",
+      "comment" : "Toggle to hide the radial menu whenever no action is selected",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -9073,7 +10319,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cacher quand aucune action n'est sélectionnée"
+            "value" : "Masquer quand aucune action n’est sélectionnée"
           }
         },
         "it" : {
@@ -9340,7 +10586,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quatrièmes horizontaux"
+            "value" : "Quarts horizontaux"
           }
         },
         "it" : {
@@ -9429,7 +10675,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiers horizontal"
+            "value" : "Tiers horizontaux"
           }
         },
         "it" : {
@@ -9869,7 +11115,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Developpeur"
+            "value" : "Développeur"
           }
         },
         "it" : {
@@ -10145,7 +11391,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop マスター"
+            "value" : "Loopマスター"
           }
         },
         "ko" : {
@@ -10749,7 +11995,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous serez désormais averti lorsque vous débloquez une nouvelle icône."
+            "value" : "Vous serez désormais averti lorsque vous débloquerez une nouvelle icône."
           }
         },
         "it" : {
@@ -10838,7 +12084,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez débloqué une nouvelle icône : %@ !"
+            "value" : "Vous avez débloqué une nouvelle icône : %@ !"
           }
         },
         "it" : {
@@ -10927,7 +12173,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez utilisé Loop 25 fois ! En récompense, voici une nouvelle icône : %@. Continuez à boucler pour en débloquer d’autres !"
+            "value" : "Vous avez utilisé Loop 25 fois ! En récompense, voici une nouvelle icône : %@. Continuez à utiliser Loop pour en débloquer d’autres !"
           }
         },
         "it" : {
@@ -10939,7 +12185,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "すでに25回も Loop しました！ご褒美として、新しいアイコン「%@」をプレゼント！さらに Loop して、新しいアイコンをアンロックしましょう！"
+            "value" : "すでに25回もLoopしました！ご褒美として、新しいアイコン「%@」をプレゼント！さらにLoopして、新しいアイコンをアンロックしましょう！"
           }
         },
         "ko" : {
@@ -11016,7 +12262,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "5000 Loops accomplies ! L’univers a été témoin de la naissance d’un maître de Loop ! Profitez de votre récompense bien méritée : une toute nouvelle icône !"
+            "value" : "5 000 Loops accomplis ! L’univers a été témoin de la naissance d’un maître de Loop ! Profitez de votre récompense bien méritée : une toute nouvelle icône !"
           }
         },
         "it" : {
@@ -11028,7 +12274,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "5000回の Loop を達成！宇宙が Loop マスターの誕生を見守りました！偉業にふさわしいご褒美、新しいアイコンをどうぞ！"
+            "value" : "5000回のLoopを達成！宇宙がLoopマスターの誕生を見守りました！偉業にふさわしいご褒美、新しいアイコンをどうぞ！"
           }
         },
         "ko" : {
@@ -11204,7 +12450,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "インポート"
+            "value" : "読み込む"
           }
         },
         "ko" : {
@@ -11280,7 +12526,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Importer des raccourcis"
+            "value" : "Importer les raccourcis"
           }
         },
         "it" : {
@@ -11292,7 +12538,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "キー設定をインポート"
+            "value" : "キー設定を読み込む"
           }
         },
         "ko" : {
@@ -11556,7 +12802,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "結合する"
+            "value" : "結合"
           }
         },
         "ko" : {
@@ -11721,7 +12967,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dimensions initiales"
+            "value" : "Cadre initial"
           }
         },
         "it" : {
@@ -11909,7 +13155,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "設置"
+            "value" : "インストール"
           }
         },
         "ko" : {
@@ -12430,7 +13676,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Garder dans l'emplacement actuel"
+            "value" : "Laisser à l’emplacement actuel"
           }
         },
         "it" : {
@@ -12608,7 +13854,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agrandir"
+            "value" : "Plus grand"
           }
         },
         "it" : {
@@ -12620,7 +13866,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "広げる"
+            "value" : "大きくする"
           }
         },
         "ko" : {
@@ -12697,7 +13943,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agrandir proportionnellement"
+            "value" : "Plus grand (proportionnel)"
           }
         },
         "it" : {
@@ -12709,7 +13955,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "拡大する"
+            "value" : "比率を保って大きくする"
           }
         },
         "ko" : {
@@ -12785,7 +14031,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lancer au démarrage"
+            "value" : "Ouvrir avec la session"
           }
         },
         "it" : {
@@ -12845,7 +14091,7 @@
       }
     },
     "Left" : {
-      "comment" : "Label for a slider in Loop’s padding settings\nSide of a trigger key",
+      "comment" : "Label for a slider in Loop’s padding settings\nSide of a trigger key\nSwipe direction picker option: left",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -12974,7 +14220,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "左部繰り返し"
+            "value" : "左側サイクル"
           }
         },
         "ko" : {
@@ -13152,7 +14398,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "左の画面"
+            "value" : "左のディスプレイ"
           }
         },
         "ko" : {
@@ -13407,7 +14653,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deux tiers gauches"
+            "value" : "Deux tiers à gauche"
           }
         },
         "it" : {
@@ -13508,7 +14754,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "左クリックで繰り返しを順番に切り替えます。"
+            "value" : "左クリックでサイクル内のアクションを順番に切り替えます。"
           }
         },
         "ko" : {
@@ -13761,7 +15007,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous ne l'avez pas encore !"
+            "value" : "Vous ne l’avez pas encore !"
           }
         },
         "it" : {
@@ -13849,7 +15095,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Qui pensez-vous être pour essayer d'accéder à ces icônes top secrètes ?"
+            "value" : "Pour qui vous prenez-vous, à vouloir accéder à ces icônes top secrètes ?"
           }
         },
         "it" : {
@@ -13937,7 +15183,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La patience est une vertu, et votre clé pour cette icône."
+            "value" : "La patience est une vertu… et la clé de cette icône."
           }
         },
         "it" : {
@@ -13961,7 +15207,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zwanst na nie!"
+            "value" : "Geduld is een deugd, en jouw sleutel tot dit icoon."
           }
         },
         "pl" : {
@@ -14025,7 +15271,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cette icône est verrouillée, mais pas votre potentiel !"
+            "value" : "Cette icône est verrouillée, mais pas votre potentiel !"
           }
         },
         "it" : {
@@ -14125,7 +15371,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を続ければ、このアイコンもすぐに手に入るよ。"
+            "value" : "Loopを続ければ、このアイコンもすぐに手に入るよ。"
           }
         },
         "ko" : {
@@ -14201,7 +15447,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cette icône est encore sous couverture, restez à l'écoute !"
+            "value" : "Cette icône est encore tenue secrète, restez à l’écoute !"
           }
         },
         "it" : {
@@ -14289,7 +15535,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Certaines icônes valent la peine d'attendre, n'est-ce pas ?"
+            "value" : "Certaines icônes valent la peine d’attendre, n’est-ce pas ?"
           }
         },
         "it" : {
@@ -14377,7 +15623,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas encore, mais vous êtes plus près qu'hier !"
+            "value" : "Pas encore, mais vous êtes plus près qu’hier !"
           }
         },
         "it" : {
@@ -14465,7 +15711,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Déverrouiller cette icône n'est qu'une question de temps et de Loops."
+            "value" : "Déverrouiller cette icône n’est qu’une question de temps et de Loops."
           }
         },
         "it" : {
@@ -14477,7 +15723,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このアイコンをアンロックするには、時間と Loop が必要なだけ。"
+            "value" : "このアイコンをアンロックするには、時間とLoopが必要なだけ。"
           }
         },
         "ko" : {
@@ -14729,7 +15975,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Continuez votre bon travail, et cette icône sera votre récompense."
+            "value" : "Continuez comme ça, et cette icône sera votre récompense."
           }
         },
         "it" : {
@@ -14905,7 +16151,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Votre voyage n'est pas encore terminé, cette icône vous attend à la fin."
+            "value" : "Votre voyage n’est pas encore terminé, cette icône vous attend à la fin."
           }
         },
         "it" : {
@@ -15081,7 +16327,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patience, jeune Looper, cette icône n'est pas loin."
+            "value" : "Patience, jeune Looper, cette icône n’est pas loin."
           }
         },
         "it" : {
@@ -15169,7 +16415,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le voyage de mille Loop commence par un seul pas."
+            "value" : "Un voyage de mille Loops commence toujours par un premier pas."
           }
         },
         "it" : {
@@ -15181,7 +16427,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "千の Loop の旅も、最初の一歩から始まる。"
+            "value" : "千のLoopの旅も、最初の一歩から始まる。"
           }
         },
         "ko" : {
@@ -15269,7 +16515,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop の一つ一つが、待つ宝物に近づけてくれる。"
+            "value" : "Loopのひとつひとつが、待っている宝物へと君を近づける。"
           }
         },
         "ko" : {
@@ -15357,7 +16603,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を重ねるたびに、このアイコンのロックは緩んでいく。"
+            "value" : "Loopを重ねるたびに、このアイコンのロックは緩んでいく。"
           }
         },
         "ko" : {
@@ -15445,7 +16691,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を重ねるごとに、君の努力が成功への鍵を刻む。"
+            "value" : "Loopを重ねるごとに、君の努力が成功への鍵を刻む。"
           }
         },
         "ko" : {
@@ -15521,7 +16767,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Les icônes ne sont pas débloquées par défaut ; elles sont gagnées Loop après Loop."
+            "value" : "Les icônes ne se débloquent pas comme ça : elles se méritent, Loop après Loop."
           }
         },
         "it" : {
@@ -15533,7 +16779,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アイコンはただアンロックされるだけじゃない、Loop ごとに勝ち取るものだ。"
+            "value" : "アイコンはただアンロックされるだけじゃない、Loopごとに勝ち取るものだ。"
           }
         },
         "ko" : {
@@ -15621,7 +16867,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop が積み重なると同時に、君のアイコンコレクションも増えていく。"
+            "value" : "Loopが積み重なると同時に、君のアイコンコレクションも増えていく。"
           }
         },
         "ko" : {
@@ -15785,7 +17031,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Votre persévérance a Looper est la passe-partout de toutes les icônes."
+            "value" : "Votre assiduité à utiliser Loop est le passe-partout de toutes les icônes."
           }
         },
         "it" : {
@@ -15797,7 +17043,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を続ける君の粘りが、すべてのアイコンのマスターキーだ。"
+            "value" : "Loopを続ける君の粘りが、すべてのアイコンのマスターキーだ。"
           }
         },
         "ko" : {
@@ -15873,7 +17119,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop autour des obstacles ; votre récompense est juste derrière."
+            "value" : "Contournez les obstacles, Loop après Loop ; votre récompense est juste derrière."
           }
         },
         "it" : {
@@ -15885,7 +17131,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "障害を Loop しろ、君の報酬はその先にある。"
+            "value" : "障害はLoopでかわせ。報酬はその先にある。"
           }
         },
         "ko" : {
@@ -15973,7 +17219,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を重ねるたびに、アイコンが育つ種をまいているんだよ。"
+            "value" : "Loopを重ねるたびに、アイコンが育つ種をまいているんだよ。"
           }
         },
         "ko" : {
@@ -16061,7 +17307,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月の満ち欠けのように、君のアイコンは Loop の周期ごとに姿を現す。"
+            "value" : "月の満ち欠けのように、君のアイコンはLoopの周期ごとに姿を現す。"
           }
         },
         "ko" : {
@@ -16149,7 +17395,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アイコンは待っている、まだ踏まれていない Loop のヴェールの向こうに。"
+            "value" : "アイコンは待っている、まだ見ぬLoopのヴェールの向こうに。"
           }
         },
         "ko" : {
@@ -16336,7 +17582,7 @@
               "other" : {
                 "stringUnit" : {
                   "state" : "translated",
-                  "value" : "残り %lld 回の Loop"
+                  "value" : "残り%lld回の Loop"
                 }
               }
             }
@@ -16518,7 +17764,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "macOS 中央"
+            "value" : "macOSの中央に配置"
           }
         },
         "ko" : {
@@ -16594,7 +17840,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La fonctionnalité macOS \"Faire glisser les fenêtres vers les bords de l'écran pour créer une mosaïque\" est actuellement activée, ce qui entre en conflit avec le magnétisme des fenêtres de Loop."
+            "value" : "La fonctionnalité macOS « Faire glisser les fenêtres vers les bords de l’écran pour créer une mosaïque » est actuellement\nactivée, ce qui entre en conflit avec le magnétisme des fenêtres de Loop."
           }
         },
         "it" : {
@@ -16606,7 +17852,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "macOS の “ウインドウを画面端にドラッグしてタイル配置” 機能が\n現在有効になっており、Loop のウインドウスナップ機能と競合します。"
+            "value" : "macOSの「ウインドウを画面の端にドラッグしてタイル表示」機能が\n現在有効になっており、Loopのウインドウスナップ機能と競合します。"
           }
         },
         "ko" : {
@@ -16649,6 +17895,95 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "macOS的「拖移視窗至螢幕邊緣來並排」功能已啟用，這將會與Loop的窗口吸附功能相衝突。"
+          }
+        }
+      }
+    },
+    "Magnify" : {
+      "comment" : "Gesture category label: magnify",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Magnify"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピンチ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Magnify"
           }
         }
       }
@@ -16772,7 +18107,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hauteur max"
+            "value" : "Maximiser la hauteur"
           }
         },
         "it" : {
@@ -16861,7 +18196,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Largeur max"
+            "value" : "Maximiser la largeur"
           }
         },
         "it" : {
@@ -16949,7 +18284,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Clic central pour activer"
+            "value" : "Activer par clic central"
           }
         },
         "it" : {
@@ -17050,7 +18385,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最小化"
+            "value" : "しまう"
           }
         },
         "ko" : {
@@ -17139,7 +18474,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "他を最小化"
+            "value" : "ほかをしまう"
           }
         },
         "ko" : {
@@ -17151,7 +18486,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Andere minimaliseren"
+            "value" : "Anderen minimaliseren"
           }
         },
         "pl" : {
@@ -17571,7 +18906,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Déplacer à droite"
+            "value" : "Déplacer à gauche"
           }
         },
         "it" : {
@@ -17749,7 +19084,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Déplacer vers le dossier Applications ?"
+            "value" : "Déplacer vers le dossier Applications ?"
           }
         },
         "it" : {
@@ -17838,13 +19173,13 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Déplacer sur le bureau %lld"
+            "value" : "Déplacer vers le Bureau %lld"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Desktop %lld"
+            "state" : "translated",
+            "value" : "Sposta %lld nel desktop"
           }
         },
         "ja" : {
@@ -17861,8 +19196,8 @@
         },
         "nl-BE" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Desktop %lld"
+            "state" : "translated",
+            "value" : "Verplaatsen naar Bureaublad %lld"
           }
         },
         "pl" : {
@@ -17927,19 +19262,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Espace suivant"
+            "value" : "Space suivant"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Next Space"
+            "state" : "translated",
+            "value" : "Sposta nello spazio successivo"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次のスペース"
+            "value" : "次の操作スペースへ移動"
           }
         },
         "ko" : {
@@ -17950,8 +19285,8 @@
         },
         "nl-BE" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Next Space"
+            "state" : "translated",
+            "value" : "Verplaatsen naar volgende Space"
           }
         },
         "pl" : {
@@ -18016,19 +19351,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Espace précédent"
+            "value" : "Space précédent"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Previous Space"
+            "state" : "translated",
+            "value" : "Sposta nello spazio precedente"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "前のスペース"
+            "value" : "前の操作スペースへ移動"
           }
         },
         "ko" : {
@@ -18039,8 +19374,8 @@
         },
         "nl-BE" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Move to Previous Space"
+            "state" : "translated",
+            "value" : "Verplaatsen naar vorige Space"
           }
         },
         "pl" : {
@@ -18205,7 +19540,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "カーソルの画面にウインドウを移動"
+            "value" : "カーソルのあるディスプレイにウインドウを移動"
           }
         },
         "ko" : {
@@ -18294,7 +19629,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次の画面"
+            "value" : "次のディスプレイ"
           }
         },
         "ko" : {
@@ -18371,7 +19706,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas d'action"
+            "value" : "Aucune action"
           }
         },
         "it" : {
@@ -18383,7 +19718,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "動作なし"
+            "value" : "アクションなし"
           }
         },
         "ko" : {
@@ -18459,7 +19794,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas d'applications ignorées"
+            "value" : "Aucune application ignorée"
           }
         },
         "it" : {
@@ -18518,6 +19853,95 @@
         }
       }
     },
+    "No gestures" : {
+      "comment" : "Empty state title in gestures settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No gestures"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun geste"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェスチャはありません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No gestures"
+          }
+        }
+      }
+    },
     "No keybinds" : {
       "localizations" : {
         "ar" : {
@@ -18547,7 +19971,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas de raccourcis"
+            "value" : "Aucun raccourci"
           }
         },
         "it" : {
@@ -18636,7 +20060,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aucun raccourci clavier n'a été défini"
+            "value" : "Aucun raccourci n’a été défini"
           }
         },
         "it" : {
@@ -18725,7 +20149,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas d’actions du menu radial"
+            "value" : "Aucune action du menu radial"
           }
         },
         "it" : {
@@ -18813,7 +20237,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Engagez ! … avec la version actuelle. C’est la plus récente."
+            "value" : "Engagez ! … avec la version actuelle. C’est la plus récente."
           }
         },
         "it" : {
@@ -18901,7 +20325,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cette appli est mieux tenue à jour que mon journal intime !"
+            "value" : "Cette appli est mieux tenue à jour que mon journal intime !"
           }
         },
         "it" : {
@@ -18925,7 +20349,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "Deze app is actueler dan mijn dagboekaantekeningen!"
           }
         },
         "pl" : {
@@ -18989,7 +20413,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ciel dégagé : aucune mise à jour à l’horizon !"
+            "value" : "Ciel dégagé : aucune mise à jour à l’horizon !"
           }
         },
         "it" : {
@@ -19013,7 +20437,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "Je kunt gerust zijn, geen updates te zien in de pijplijn!"
           }
         },
         "pl" : {
@@ -19077,7 +20501,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Que la chance soit toujours avec vous… pas de mise à jour aujourd’hui !"
+            "value" : "Que la chance soit toujours avec vous… pas de mise à jour aujourd’hui !"
           }
         },
         "it" : {
@@ -19177,7 +20601,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop をなめると痛い目に遭うぞ。"
+            "value" : "Loopをなめると痛い目に遭うぞ。"
           }
         },
         "ko" : {
@@ -19253,7 +20677,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Une nouvelle version ? Non merci, on adore celle-là."
+            "value" : "Une nouvelle version ? Non merci, on adore celle-là."
           }
         },
         "it" : {
@@ -19277,7 +20701,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "Nieuwe versie? Sorry, we zijn te gehecht aan deze."
           }
         },
         "pl" : {
@@ -19353,7 +20777,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop 更新？笑止千万。"
+            "value" : "Loop更新？笑止千万。"
           }
         },
         "ko" : {
@@ -19517,7 +20941,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dans une galaxie lointaine, très lointaine… toujours pas de mise à jour !"
+            "value" : "Dans une galaxie lointaine, très lointaine… toujours pas de mise à jour !"
           }
         },
         "it" : {
@@ -19541,7 +20965,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "In een sterrenstelsel hier ver ver vandaan.. nog steeds geen updates!"
           }
         },
         "pl" : {
@@ -19605,7 +21029,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous possédez le précieux. Nul besoin de mise à jour !"
+            "value" : "Vous possédez le précieux. Nul besoin de mise à jour !"
           }
         },
         "it" : {
@@ -19617,7 +21041,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を舐めるな。"
+            "value" : "Loopを舐めるな。"
           }
         },
         "ko" : {
@@ -19629,7 +21053,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Je hebt al de top, geen updates nodig."
+            "value" : "Je hebt al de lieveling, geen updates nodig!"
           }
         },
         "pl" : {
@@ -19693,7 +21117,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "À vitesse lumière… aucune mise à jour en vue !"
+            "value" : "À vitesse lumière… aucune mise à jour en vue !"
           }
         },
         "it" : {
@@ -19781,7 +21205,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ça n'est pas la mise à jour que vous recherchez !"
+            "value" : "Ça n’est pas la mise à jour que vous recherchez !"
           }
         },
         "it" : {
@@ -19869,7 +21293,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On a égaré le bouton “Mettre à jour”. Oups !"
+            "value" : "On a égaré le bouton « Mettre à jour ». Oups !"
           }
         },
         "it" : {
@@ -19881,7 +21305,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "アップデート”ボタンを紛失しました。おっと！"
+            "value" : "「アップデート」ボタンを紛失しました。おっと！"
           }
         },
         "ko" : {
@@ -19957,7 +21381,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Je te jure que c’était là… une seconde."
+            "value" : "Je vous jure que c’était là… une seconde."
           }
         },
         "it" : {
@@ -20057,7 +21481,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "１日１個のリンゴが…アップデートを遠ざける。"
+            "value" : "1日1個のリンゴが…アップデートを遠ざける。"
           }
         },
         "ko" : {
@@ -20133,7 +21557,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Que la Force soit avec vous… la prochaine fois !"
+            "value" : "Que la Force soit avec vous… la prochaine fois !"
           }
         },
         "it" : {
@@ -20221,7 +21645,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La Force est puissante avec cette version !"
+            "value" : "La Force est puissante avec cette version !"
           }
         },
         "it" : {
@@ -20497,7 +21921,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " 甘い夢は作られる…アップデートなしで。"
+            "value" : "甘い夢は作られる…アップデートなしで。"
           }
         },
         "ko" : {
@@ -20585,7 +22009,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を更新する？甘く見ないで。"
+            "value" : "Loopを更新する？甘く見ないで。"
           }
         },
         "ko" : {
@@ -20661,7 +22085,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Restez vigilant, d’autres infos arrivent bientôt !"
+            "value" : "Restez vigilant, d’autres infos arrivent bientôt !"
           }
         },
         "it" : {
@@ -20673,7 +22097,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " 鋭くあれ、さらなる情報はすぐ来る！"
+            "value" : "油断するな、新情報はまもなく届く！"
           }
         },
         "ko" : {
@@ -20685,7 +22109,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "Blijf scherp, er komt binnenkort meer informatie!"
           }
         },
         "pl" : {
@@ -20749,7 +22173,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous êtes déjà à la pointe de la technologie !"
+            "value" : "Vous êtes déjà à la pointe de la technologie !"
           }
         },
         "it" : {
@@ -20761,7 +22185,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " 君は最新テックをクルーズ中！"
+            "value" : "最新テクノロジーで快適にクルーズ中！"
           }
         },
         "ko" : {
@@ -20773,7 +22197,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "Je draait op de nieuwste technologie!"
           }
         },
         "pl" : {
@@ -20849,7 +22273,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " 我々は戻って来る。アップデートと共に…後で。"
+            "value" : "我々は戻って来る。アップデートと共に…後で。"
           }
         },
         "ko" : {
@@ -20861,7 +22285,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "-"
+            "value" : "We komen terug.. met updates.. later"
           }
         },
         "pl" : {
@@ -20925,7 +22349,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Un sou pour ton… absence de mises à jour."
+            "value" : "Un sou pour votre… absence de mises à jour."
           }
         },
         "it" : {
@@ -20937,7 +22361,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop 更新の道は、果てしなく険しい。"
+            "value" : "Loop更新の道は、果てしなく険しい。"
           }
         },
         "ko" : {
@@ -21013,7 +22437,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez déjà la meilleure version de Loop !"
+            "value" : "Vous avez déjà la meilleure version de Loop !"
           }
         },
         "it" : {
@@ -21025,7 +22449,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "君はもう最高の Loop を手にしてる！"
+            "value" : "君はもう最高のLoopを手にしてる！"
           }
         },
         "ko" : {
@@ -21113,7 +22537,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop を更新するのは、富士山に登るより難しい。"
+            "value" : "Loopを更新するのは、富士山に登るより難しい。"
           }
         },
         "ko" : {
@@ -21277,7 +22701,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tout vient à point à qui sait attendre... les mises à jour."
+            "value" : "Tout vient à point à qui sait attendre… les mises à jour."
           }
         },
         "it" : {
@@ -21289,7 +22713,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "石の上にも三年… Loop 更新にはまだ早い。"
+            "value" : "石の上にも三年…Loop更新にはまだ早い。"
           }
         },
         "ko" : {
@@ -21377,7 +22801,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "99の問題があったとしても、アップデートはその１つじゃない。"
+            "value" : "99の問題があったとしても、アップデートはその1つじゃない。"
           }
         },
         "ko" : {
@@ -21541,7 +22965,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez atteint le niveau max !"
+            "value" : "Vous avez atteint le niveau max !"
           }
         },
         "it" : {
@@ -21817,7 +23241,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " 新たな情報なし、司令官。"
+            "value" : "新たな情報なし、司令官。"
           }
         },
         "ko" : {
@@ -21893,7 +23317,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas de mises à jour ? Nom de Zeus !"
+            "value" : "Pas de mise à jour ? Nom de Zeus !"
           }
         },
         "it" : {
@@ -21981,7 +23405,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas de mise à jour, Mr Anderson"
+            "value" : "Pas de mise à jour, monsieur Anderson"
           }
         },
         "it" : {
@@ -22069,7 +23493,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pas de mises à jour à Ba Sing Se"
+            "value" : "Pas de mise à jour à Ba Sing Se"
           }
         },
         "it" : {
@@ -22157,7 +23581,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Des mises à jour ? Avec la conjoncture actuelle ?"
+            "value" : "Des mises à jour ? Avec la conjoncture actuelle ?"
           }
         },
         "it" : {
@@ -22245,7 +23669,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Revenez plus tard !"
+            "value" : "Revenez plus tard !"
           }
         },
         "it" : {
@@ -22333,7 +23757,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop fonctionne à plein régime !"
+            "value" : "Loop fonctionne à plein régime !"
           }
         },
         "it" : {
@@ -22345,7 +23769,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop は全盛期だ！"
+            "value" : "Loopは全盛期だ！"
           }
         },
         "ko" : {
@@ -22421,7 +23845,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tous les systèmes sont opérationnels !"
+            "value" : "Tous les systèmes sont opérationnels !"
           }
         },
         "it" : {
@@ -22509,7 +23933,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous êtes à jour :)"
+            "value" : "Vous êtes à jour :)"
           }
         },
         "it" : {
@@ -22597,7 +24021,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aucune mise à jour pour le moment !"
+            "value" : "Aucune mise à jour pour le moment !"
           }
         },
         "it" : {
@@ -22773,7 +24197,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La séquence est vide"
+            "value" : "Aucun élément dans la séquence"
           }
         },
         "it" : {
@@ -22785,7 +24209,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "繰り返す項目はありません"
+            "value" : "サイクルする項目はありません"
           }
         },
         "ko" : {
@@ -22873,7 +24297,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ の通知権限は現在無効になっています。"
+            "value" : "%@の通知は現在許可されていません。"
           }
         },
         "ko" : {
@@ -22949,7 +24373,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ouvrir les réglages"
+            "value" : "Ouvrir Réglages Système"
           }
         },
         "it" : {
@@ -23037,7 +24461,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Activez-les dans les réglages système."
+            "value" : "Activez-les dans Réglages Système."
           }
         },
         "it" : {
@@ -23137,7 +24561,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新しいアイコンを解除したときに通知"
+            "value" : "新しいアイコンをアンロックしたときに通知"
           }
         },
         "ko" : {
@@ -23390,7 +24814,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marge"
+            "value" : "Marges"
           }
         },
         "it" : {
@@ -23479,7 +24903,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Taille d’aperçu"
+            "value" : "Taille de la partie visible"
           }
         },
         "it" : {
@@ -23491,7 +24915,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "覗きサイズ"
+            "value" : "表示部分のサイズ"
           }
         },
         "ko" : {
@@ -23568,7 +24992,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Permissions"
+            "value" : "Autorisations"
           }
         },
         "it" : {
@@ -23580,7 +25004,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "権限"
+            "value" : "アクセス権"
           }
         },
         "ko" : {
@@ -23623,6 +25047,95 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "權限"
+          }
+        }
+      }
+    },
+    "Pinch" : {
+      "comment" : "Gesture kind: pinch (fingers move together, zooming out)\nMagnify gesture picker option: pinch",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pinch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pincer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピンチイン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pinch"
           }
         }
       }
@@ -23833,7 +25346,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Conserver les dimensions"
+            "value" : "Conserver la taille"
           }
         },
         "it" : {
@@ -23921,7 +25434,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appuyez sur \"Ajouter\" pour ajouter un élément à la séquence."
+            "value" : "Appuyez sur « Ajouter » pour ajouter un élément à la séquence"
           }
         },
         "it" : {
@@ -23933,7 +25446,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "「追加」を押すと、新しい繰り返し項目を追加できます。"
+            "value" : "「追加」を押すと、新しいサイクル項目を追加できます。"
           }
         },
         "ko" : {
@@ -23980,6 +25493,95 @@
         }
       }
     },
+    "Press \"Add\" to add a gesture" : {
+      "comment" : "Empty state subtitle in gestures settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez sur « Ajouter » pour ajouter un geste"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「追加」を押すと、新しいジェスチャを追加できます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Press \"Add\" to add a gesture"
+          }
+        }
+      }
+    },
     "Press \"Add\" to add a keybind" : {
       "localizations" : {
         "ar" : {
@@ -24009,7 +25611,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appuyez sur \"Ajouter\" pour ajouter un raccourci"
+            "value" : "Appuyez sur « Ajouter » pour ajouter un raccourci"
           }
         },
         "it" : {
@@ -24098,7 +25700,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appuyez sur \"Ajouter\" pour ajouter une action"
+            "value" : "Appuyez sur « Ajouter » pour ajouter une action"
           }
         },
         "it" : {
@@ -24186,7 +25788,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Appuyez sur \"Ajouter\" pour ajouter une application"
+            "value" : "Appuyez sur « Ajouter » pour ajouter une application"
           }
         },
         "it" : {
@@ -24375,7 +25977,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "前の画面"
+            "value" : "前のディスプレイ"
           }
         },
         "ko" : {
@@ -24464,7 +26066,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "選択中のウィンドウのコーナーの丸みを優先する"
+            "value" : "選択中のウインドウのコーナーの丸みを優先"
           }
         },
         "ko" : {
@@ -24630,7 +26232,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quart"
+            "value" : "Quarts"
           }
         },
         "it" : {
@@ -24731,7 +26333,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ を終了"
+            "value" : "%@を終了"
           }
         },
         "ko" : {
@@ -24867,7 +26469,7 @@
       }
     },
     "Radial Menu" : {
-      "comment" : "Section header shown in settings",
+      "comment" : "Label shown for a gesture configured to open the radial menu\nSection header shown in settings",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -24896,7 +26498,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menu Radial"
+            "value" : "Menu radial"
           }
         },
         "it" : {
@@ -24997,7 +26599,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "再起動して反映"
+            "value" : "再度開いて完了"
           }
         },
         "ko" : {
@@ -25174,7 +26776,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "後で通知する"
+            "value" : "あとで通知"
           }
         },
         "ko" : {
@@ -25340,7 +26942,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser"
+            "value" : "Demander l’accès…"
           }
         },
         "it" : {
@@ -25352,7 +26954,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "許可を求める…"
+            "value" : "アクセス権を要求…"
           }
         },
         "ko" : {
@@ -25517,7 +27119,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réinitialiser les raccourcis ?"
+            "value" : "Réinitialiser les raccourcis ?"
           }
         },
         "it" : {
@@ -25529,7 +27131,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "キー設定をリセット"
+            "value" : "キー設定をリセットしますか？"
           }
         },
         "ko" : {
@@ -25694,7 +27296,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réinitialiser les actions du menu radial ?"
+            "value" : "Réinitialiser les actions du menu radial ?"
           }
         },
         "it" : {
@@ -25706,7 +27308,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "円形メニューのアクションをリセット"
+            "value" : "円形メニューのアクションをリセットしますか？"
           }
         },
         "ko" : {
@@ -25794,7 +27396,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "カーソル下のウインドウをリサイズ"
+            "value" : "カーソル下のウインドウのサイズを変更"
           }
         },
         "ko" : {
@@ -25870,7 +27472,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gérer la compatibilité avec Stage Manage"
+            "value" : "Respecter Stage Manager"
           }
         },
         "it" : {
@@ -25882,7 +27484,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Stage Manager を尊重"
+            "value" : "ステージマネージャを考慮"
           }
         },
         "ko" : {
@@ -25970,7 +27572,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ドラッグ時にウインドウ枠を復元"
+            "value" : "ドラッグ時にウインドウのサイズを復元"
           }
         },
         "ko" : {
@@ -26018,7 +27620,7 @@
       }
     },
     "Right" : {
-      "comment" : "Label for a slider in Loop’s padding settings\nSide of a trigger key",
+      "comment" : "Label for a slider in Loop’s padding settings\nSide of a trigger key\nSwipe direction picker option: right",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -26047,7 +27649,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Droit"
+            "value" : "Droite"
           }
         },
         "it" : {
@@ -26147,7 +27749,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "右部繰り返し"
+            "value" : "右側サイクル"
           }
         },
         "ko" : {
@@ -26313,7 +27915,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Écran droit"
+            "value" : "Écran de droite"
           }
         },
         "it" : {
@@ -26325,7 +27927,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "右の画面"
+            "value" : "右のディスプレイ"
           }
         },
         "ko" : {
@@ -26580,7 +28182,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deux tiers droits"
+            "value" : "Deux tiers à droite"
           }
         },
         "it" : {
@@ -26758,7 +28360,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Changement d'écran"
+            "value" : "Changement d’écran"
           }
         },
         "it" : {
@@ -26770,7 +28372,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "画面移動"
+            "value" : "ディスプレイ移動"
           }
         },
         "ko" : {
@@ -26935,7 +28537,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Deuxième quatrième"
+            "value" : "Deuxième quart"
           }
         },
         "it" : {
@@ -26959,7 +28561,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tweede kwartier"
+            "value" : "Tweede kwart"
           }
         },
         "pl" : {
@@ -27111,7 +28713,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Envoyer un feedback"
+            "value" : "Envoyer des commentaires"
           }
         },
         "it" : {
@@ -27123,7 +28725,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ご意見を送る"
+            "value" : "フィードバックを送信"
           }
         },
         "ko" : {
@@ -27199,7 +28801,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Attribuer une touche d’activation"
+            "value" : "Attribuer une touche d’activation…"
           }
         },
         "it" : {
@@ -27465,7 +29067,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "À Propos"
+            "value" : "À propos"
           }
         },
         "it" : {
@@ -27477,7 +29079,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "概要"
+            "value" : "情報"
           }
         },
         "ko" : {
@@ -27553,7 +29155,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Couleur d'accentuation"
+            "value" : "Couleur d’accentuation"
           }
         },
         "it" : {
@@ -27565,7 +29167,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "テーマカラー"
+            "value" : "アクセントカラー"
           }
         },
         "ko" : {
@@ -27653,7 +29255,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "詳細設定"
+            "value" : "詳細"
           }
         },
         "ko" : {
@@ -27872,6 +29474,95 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "排除的應用程式"
+          }
+        }
+      }
+    },
+    "Settings tab: Gestures" : {
+      "comment" : "Title of the gestures settings tab.",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestures"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestes"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ジェスチャ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Gestures"
           }
         }
       }
@@ -28169,7 +29860,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Menu Radial"
+            "value" : "Menu radial"
           }
         },
         "it" : {
@@ -28345,7 +30036,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Partagez vos retours sur notre page GitHub : vous pouvez y signaler des bugs, suggérer des fonctionnalités ou nous faire part de vos idées. Si Loop a amélioré votre productivité, vous pouvez aussi nous soutenir par un don :)\""
+            "value" : "Partagez vos retours sur notre page GitHub : vous pouvez y signaler des bugs, suggérer des fonctionnalités ou nous faire part de vos idées. Si Loop a amélioré votre productivité, vous pouvez aussi nous soutenir par un don :)"
           }
         },
         "it" : {
@@ -28357,7 +30048,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "GitHub ページでフィードバックを共有してください。バグの報告や機能の提案、その他の貴重なご意見をお寄せいただけます。また、Loop があなたの作業効率を向上させたと感じた場合は、寄付も受け付けています (•‿•)"
+            "value" : "GitHubページでフィードバックを共有してください。バグの報告や機能の提案、その他の貴重なご意見をお寄せいただけます。また、Loopがあなたの作業効率を向上させたと感じた場合は、寄付も受け付けています (•‿•)"
           }
         },
         "ko" : {
@@ -28433,7 +30124,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Changer le focus lors de l’aperçu"
+            "value" : "Changer le focus lors de la mise de côté"
           }
         },
         "it" : {
@@ -28521,7 +30212,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afficher dans le dock"
+            "value" : "Afficher dans le Dock"
           }
         },
         "it" : {
@@ -28533,7 +30224,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dock に表示"
+            "value" : "Dockに表示"
           }
         },
         "ko" : {
@@ -28609,7 +30300,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afficher un aperçu pendant l'utilisation"
+            "value" : "Afficher un aperçu pendant l’utilisation"
           }
         },
         "it" : {
@@ -28621,7 +30312,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop 中にプレビューを表示"
+            "value" : "Loop中にプレビューを表示"
           }
         },
         "ko" : {
@@ -29674,7 +31365,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réduire"
+            "value" : "Plus petit"
           }
         },
         "it" : {
@@ -29686,7 +31377,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "狭める"
+            "value" : "小さくする"
           }
         },
         "ko" : {
@@ -29763,7 +31454,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Réduire proportionnellement"
+            "value" : "Plus petit (proportionnel)"
           }
         },
         "it" : {
@@ -29775,7 +31466,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "縮小する"
+            "value" : "比率を保って小さくする"
           }
         },
         "ko" : {
@@ -30030,19 +31721,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Changement d'espace"
+            "value" : "Changement de Space"
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Space Switching"
+            "state" : "translated",
+            "value" : "Cambio spazi"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "スペース移動"
+            "value" : "操作スペース移動"
           }
         },
         "ko" : {
@@ -30053,8 +31744,8 @@
         },
         "nl-BE" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Space Switching"
+            "state" : "translated",
+            "value" : "Space wisseling"
           }
         },
         "pl" : {
@@ -30085,6 +31776,95 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Space Switching"
+          }
+        }
+      }
+    },
+    "Spread" : {
+      "comment" : "Gesture kind: spread (fingers move apart, zooming in)\nMagnify gesture picker option: spread",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spread"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écarter"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ピンチアウト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Spread"
           }
         }
       }
@@ -30207,7 +31987,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Taille de la bande du Stage Manager"
+            "value" : "Taille de la bande de Stage Manager"
           }
         },
         "it" : {
@@ -30473,7 +32253,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Supporte les effets Liquid Glass de macOS Tahoe"
+            "value" : "Prend en charge les effets Liquid Glass de macOS Tahoe"
           }
         },
         "it" : {
@@ -30485,7 +32265,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "macOS Tahoe の Liquid Glass 効果に対応"
+            "value" : "macOS TahoeのLiquid Glass効果に対応"
           }
         },
         "ko" : {
@@ -30562,7 +32342,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Supprimer la Mission Control"
+            "value" : "Bloquer Mission Control"
           }
         },
         "it" : {
@@ -30574,7 +32354,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mission Control を抑制"
+            "value" : "Mission Controlを抑制"
           }
         },
         "ko" : {
@@ -30621,6 +32401,451 @@
         }
       }
     },
+    "Swipe" : {
+      "comment" : "Gesture category label: swipe",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スワイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe"
+          }
+        }
+      }
+    },
+    "Swipe Down" : {
+      "comment" : "Gesture kind: directional swipe",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe Down"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers le bas"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下にスワイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Down"
+          }
+        }
+      }
+    },
+    "Swipe Left" : {
+      "comment" : "Gesture kind: directional swipe",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe Left"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers la gauche"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "左にスワイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Left"
+          }
+        }
+      }
+    },
+    "Swipe Right" : {
+      "comment" : "Gesture kind: directional swipe",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe Right"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers la droite"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右にスワイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Right"
+          }
+        }
+      }
+    },
+    "Swipe Up" : {
+      "comment" : "Gesture kind: directional swipe",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe Up"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayer vers le haut"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上にスワイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Swipe Up"
+          }
+        }
+      }
+    },
     "Sync Wallpaper" : {
       "localizations" : {
         "ar" : {
@@ -30650,7 +32875,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Synchroniser avec le fond d'écran"
+            "value" : "Synchroniser avec le fond d’écran"
           }
         },
         "it" : {
@@ -30827,7 +33052,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ce raccourci est déjà utilisé par %@"
+            "value" : "Ce raccourci est déjà utilisé par %@."
           }
         },
         "it" : {
@@ -30839,7 +33064,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "そのキー設定はすでに %@ が使用しています。"
+            "value" : "そのキー設定は、%@ですでに使われています。"
           }
         },
         "ko" : {
@@ -31150,6 +33375,95 @@
         }
       }
     },
+    "There are other gestures that conflict with this gesture." : {
+      "comment" : "Tooltip shown on a conflicting gesture in settings",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce geste entre en conflit avec d’autres gestes."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このジェスチャと競合する他のジェスチャがあります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "There are other gestures that conflict with this gesture."
+          }
+        }
+      }
+    },
     "There are other keybinds that conflict with this key combination." : {
       "localizations" : {
         "ar" : {
@@ -31356,7 +33670,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Troisième quatrième"
+            "value" : "Troisième quart"
           }
         },
         "it" : {
@@ -31380,7 +33694,7 @@
         "nl-BE" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Derde kwartier"
+            "value" : "Derde kwart"
           }
         },
         "pl" : {
@@ -31457,7 +33771,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "このアクションはキー設定に紐付けられています。このアクションを変更すると、両方に影響します。"
+            "value" : "このアクションはキー設定にリンクされています。このアクションを変更すると、両方に影響します。"
           }
         },
         "ko" : {
@@ -31505,7 +33819,7 @@
       }
     },
     "This macOS version is no longer supported." : {
-      "comment" : "Text displayed in a notification when the current macOS version is no longer supported.",
+      "comment" : "Text shown on the update button in the About settings page when the current macOS version is no longer supported.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -31546,7 +33860,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "この macOS バージョンへのサポートは終了しました。"
+            "value" : "このmacOSバージョンへのサポートは終了しました。"
           }
         },
         "ko" : {
@@ -31623,7 +33937,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tous les raccourcis seront réinitialisés à leurs paramètres d’origine."
+            "value" : "Tous les raccourcis seront réinitialisés à leurs valeurs par défaut."
           }
         },
         "it" : {
@@ -31712,7 +34026,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Toutes les actions du menu radial seront réinitialisées à leurs paramètres par défaut."
+            "value" : "Toutes les actions du menu radial seront réinitialisées à leurs valeurs par défaut."
           }
         },
         "it" : {
@@ -31771,6 +34085,95 @@
         }
       }
     },
+    "Titlebar Only" : {
+      "comment" : "Gesture activation zone restricted to a window's titlebar",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titlebar Only"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barre de titre uniquement"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイトルバーのみ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Titlebar Only"
+          }
+        }
+      }
+    },
     "To save power, window animations are\nunavailable in Low Power Mode." : {
       "localizations" : {
         "ar" : {
@@ -31800,7 +34203,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pour économiser de l’énergie, les animations de fenêtres\nne sont pas disponibles en mode basse énergie."
+            "value" : "Pour économiser de l’énergie, les animations de fenêtres\nne sont pas disponibles en mode économie d’énergie."
           }
         },
         "it" : {
@@ -31812,7 +34215,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "省エネルギーモードでは、ウインドウの\nアニメーションは無効になります。"
+            "value" : "低電力モードでは、ウインドウの\nアニメーションは無効になります。"
           }
         },
         "ko" : {
@@ -31989,7 +34392,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上部繰り返し"
+            "value" : "上側サイクル"
           }
         },
         "ko" : {
@@ -32066,7 +34469,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Moitié haute"
+            "value" : "Moitié supérieure"
           }
         },
         "it" : {
@@ -32345,7 +34748,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "上の画面"
+            "value" : "上のディスプレイ"
           }
         },
         "ko" : {
@@ -32422,7 +34825,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiers haut"
+            "value" : "Tiers supérieur"
           }
         },
         "it" : {
@@ -32688,7 +35091,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Délai d'activation"
+            "value" : "Délai d’activation"
           }
         },
         "it" : {
@@ -32777,7 +35180,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Touche d'activation"
+            "value" : "Touche d’activation"
           }
         },
         "it" : {
@@ -32878,7 +35281,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "後で試す"
+            "value" : "あとで再試行"
           }
         },
         "ko" : {
@@ -32967,7 +35370,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "元に戻す"
+            "value" : "取り消す"
           }
         },
         "ko" : {
@@ -33056,7 +35459,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "トリガーキーのリンク解除"
+            "value" : "トリガーキーのリンクを解除"
           }
         },
         "ko" : {
@@ -33221,7 +35624,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Taille récupérée"
+            "value" : "Taille une fois récupérée"
           }
         },
         "it" : {
@@ -33233,7 +35636,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "スタッシュ非表示時のサイズ"
+            "value" : "スタッシュ解除時のサイズ"
           }
         },
         "ko" : {
@@ -33280,6 +35683,95 @@
         }
       }
     },
+    "Up" : {
+      "comment" : "Swipe direction picker option: up",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Up"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haut"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "nl-BE" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Up"
+          }
+        }
+      }
+    },
     "Update from: %@" : {
       "comment" : "A label at the bottom of the update view that indicates the current app version and a message suggesting an update. The argument is the current app version.",
       "localizations" : {
@@ -33310,7 +35802,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Version actuelle : %@"
+            "value" : "Version actuelle : %@"
           }
         },
         "it" : {
@@ -33399,7 +35891,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mise à jour…"
+            "value" : "Mettre à jour…"
           }
         },
         "it" : {
@@ -33588,7 +36080,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ がバックグラウンドで動作しているときのみ、アップデートがインストールされます。"
+            "value" : "%@がバックグラウンドで動作しているときのみ、アップデートがインストールされます。"
           }
         },
         "ko" : {
@@ -33765,7 +36257,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "macOS の中央を使用"
+            "value" : "macOSの中央配置を使用"
           }
         },
         "ko" : {
@@ -33853,7 +36345,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "利用可能な場合は macOS のウインドウマネージャを使用"
+            "value" : "利用可能な場合はmacOSのウインドウマネージャを使用"
           }
         },
         "ko" : {
@@ -33929,7 +36421,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Valeurs fixes en pixels"
+            "value" : "Utiliser des pixels"
           }
         },
         "it" : {
@@ -34017,7 +36509,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "À utiliser si vous avez une barre de menu personnalisée."
+            "value" : "À utiliser si vous avez une barre des menus personnalisée."
           }
         },
         "it" : {
@@ -34118,7 +36610,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "バージョン：%@"
+            "value" : "バージョン%@"
           }
         },
         "ko" : {
@@ -34462,7 +36954,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fond d'écran"
+            "value" : "Fond d’écran"
           }
         },
         "it" : {
@@ -34551,7 +37043,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoriser la Mission Control à s'ouvrir lorsque les fenêtres\nsont déplacées en haut de l'écran."
+            "value" : "Autoriser ou non Mission Control à s’ouvrir lorsque les fenêtres\nsont déplacées en haut de l’écran."
           }
         },
         "it" : {
@@ -34563,7 +37055,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウインドウ上端ドラッグ時に\nMission Control を開くかどうか。"
+            "value" : "ウインドウを画面上端にドラッグしたときに\nMission Controlを開くかどうか。"
           }
         },
         "ko" : {
@@ -34740,7 +37232,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウィンドウ"
+            "value" : "ウインドウ"
           }
         },
         "ko" : {
@@ -34918,7 +37410,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ウィンドウスナップ"
+            "value" : "ウインドウスナップ"
           }
         },
         "ko" : {
@@ -34994,7 +37486,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Le magnétisme des fenêtres utilisera toujours l'aperçu."
+            "value" : "Le magnétisme des fenêtres utilisera toujours l’aperçu."
           }
         },
         "it" : {
@@ -35349,7 +37841,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous pouvez utiliser un maximum de %lld touches d'activation."
+            "value" : "Vous pouvez utiliser un maximum de %lld touches d’activation."
           }
         },
         "it" : {
@@ -35361,7 +37853,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "トリガーキーは %lld キーまでしか使えません。"
+            "value" : "トリガーキーには最大で%lld個のキーしか使用できません。"
           }
         },
         "ko" : {
@@ -35438,7 +37930,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impossible d’exporter quelque chose qui n’existe pas !"
+            "value" : "Impossible d’exporter quelque chose qui n’existe pas !"
           }
         },
         "it" : {
@@ -35450,7 +37942,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "存在しないキー設定はエクスポートできません！"
+            "value" : "存在しないキー設定は書き出せません！"
           }
         },
         "ko" : {
@@ -35526,7 +38018,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez utilisé Loop %lld fois !"
+            "value" : "Vous avez utilisé Loop %lld fois !"
           }
         },
         "it" : {
@@ -35538,7 +38030,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld 回 Loop しました！"
+            "value" : "%lld回Loopしました！"
           }
         },
         "ko" : {
@@ -35614,7 +38106,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vous avez bouclé… euh… j’ai perdu le compte…"
+            "value" : "Vous avez utilisé Loop… euh… j’ai perdu le compte…"
           }
         },
         "it" : {
@@ -35626,7 +38118,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Loop した…えっと…もう数えられない…"
+            "value" : "Loopした…えっと…もう数えられない…"
           }
         },
         "ko" : {

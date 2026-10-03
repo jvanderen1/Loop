@@ -10,8 +10,8 @@ import Luminare
 import SwiftUI
 
 struct CycleActionConfigurationView: View {
-    @Binding var windowAction: WindowAction
-    @Binding var isPresented: Bool
+    @Binding private var windowAction: WindowAction
+    @Binding private var isPresented: Bool
 
     @State private var action: WindowAction // this is so that onChange is called for each property
 
@@ -36,7 +36,7 @@ struct CycleActionConfigurationView: View {
 
             LuminareSection(outerPadding: 0) {
                 LuminareButtonRow {
-                    Button("Add") {
+                    Button(String(localized: "Add", comment: "Used to add items to a list")) {
                         if action.cycle == nil {
                             action.cycle = []
                         }
@@ -44,7 +44,7 @@ struct CycleActionConfigurationView: View {
                         action.cycle?.insert(.init(.noAction), at: 0)
                     }
 
-                    Button("Remove", role: .destructive) {
+                    Button(String(localized: "Remove", comment: "Used to remove items from a list"), role: .destructive) {
                         action.cycle?.removeAll(where: { selectedKeybinds.contains($0) })
                     }
                     .disabled(selectedKeybinds.isEmpty)
@@ -69,15 +69,11 @@ struct CycleActionConfigurationView: View {
                     )
                     .environmentObject(KeybindsConfigurationModel())
                 } emptyView: {
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Nothing to cycle through")
-                                .font(.title3)
-                            Text("Press \"Add\" to add a cycle item")
-                                .font(.caption)
-                        }
-                        Spacer()
+                    VStack {
+                        Text("Nothing to cycle through")
+                            .font(.title3)
+                        Text("Press \"Add\" to add a cycle item")
+                            .font(.caption)
                     }
                     .foregroundStyle(.secondary)
                     .padding()

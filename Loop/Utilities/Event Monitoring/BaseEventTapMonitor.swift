@@ -24,23 +24,33 @@ class BaseEventTapMonitor: EventMonitorProtocol, Identifiable, Equatable {
     private var readableIdentifier: String?
     private(set) var isEnabled: Bool = false
 
+    /// True while the tap's refcon holds a passRetained reference to self
+    private var refconRetainOutstanding: Bool = false
+
     private var restartTimestamps: [ContinuousClock.Instant] = []
 
     deinit {
         tearDownEventTap()
     }
 
+    /// Subclasses must pass `Unmanaged.passRetained(self).toOpaque()` as the tap's userInfo
+    /// before calling this, so the base class can balance that retain in `tearDownEventTap`
     func setupRunLoopSource(eventTap: CFMachPort, readableIdentifier: String) {
         let runLoop = EventTapThread.shared.runLoop
         self.readableIdentifier = readableIdentifier
 
-        if let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0) {
-            self.eventTap = eventTap
-            self.runLoop = runLoop
-            self.runLoopSource = runLoopSource
-            CFRunLoopAddSource(runLoop, runLoopSource, .commonModes)
-            CFRunLoopWakeUp(runLoop)
+        guard let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0) else {
+            CFMachPortInvalidate(eventTap)
+            Unmanaged.passUnretained(self).release()
+            return
         }
+
+        refconRetainOutstanding = true
+        self.eventTap = eventTap
+        self.runLoop = runLoop
+        self.runLoopSource = runLoopSource
+        CFRunLoopAddSource(runLoop, runLoopSource, .commonModes)
+        CFRunLoopWakeUp(runLoop)
     }
 
     func start() {
@@ -80,22 +90,31 @@ class BaseEventTapMonitor: EventMonitorProtocol, Identifiable, Equatable {
         lhs.id == rhs.id
     }
 
-    /// Attempts to re-enable the tap after a timeout, giving up if it's restarting too frequently.
+    /// Re-enables the tap after the system disabled it.
+    /// If it's restarting too frequently, pauses first so a stalled tap doesn't keep interrupting input.
     func attemptRestart() {
         let now = ContinuousClock.now
         let windowStart = now - Self.restartWindow
         restartTimestamps.removeAll { $0 < windowStart }
         restartTimestamps.append(now)
 
-        let identifier = readableIdentifier ?? id.uuidString
-
-        if restartTimestamps.count > Self.maxRestartsInWindow {
-            log.warn("Event tap '\(identifier)' restart cascade detected, tearing down")
-            tearDownEventTap()
+        guard restartTimestamps.count > Self.maxRestartsInWindow else {
+            start()
             return
         }
 
-        start()
+        let identifier = readableIdentifier ?? id.uuidString
+        log.warn("Event tap '\(identifier)' restart cascade detected, pausing for \(Self.restartWindow)")
+        restartTimestamps.removeAll()
+
+        let runLoop = EventTapThread.shared.runLoop
+        DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+            CFRunLoopPerformBlock(runLoop, CFRunLoopMode.commonModes as CFTypeRef) { [weak self] in
+                guard let self, isEnabled else { return }
+                start()
+            }
+            CFRunLoopWakeUp(runLoop)
+        }
     }
 
     private func tearDownEventTap() {
@@ -110,18 +129,29 @@ class BaseEventTapMonitor: EventMonitorProtocol, Identifiable, Equatable {
         self.runLoopSource = nil
         isEnabled = false
 
+        // Balance the passRetained from setup on the tap thread, after invalidation,
+        // so any in-flight callback finishes before self can deallocate
+        let releaseToken: Unmanaged<BaseEventTapMonitor>? = refconRetainOutstanding ? Unmanaged.passUnretained(self) : nil
+        refconRetainOutstanding = false
+
         if let eventTap, CFMachPortIsValid(eventTap) {
             CGEvent.tapEnable(tap: eventTap, enable: false)
-            CFMachPortInvalidate(eventTap)
         }
 
-        guard let runLoop, let runLoopSource else { return }
+        guard let runLoop, let runLoopSource else {
+            if let eventTap, CFMachPortIsValid(eventTap) {
+                CFMachPortInvalidate(eventTap)
+            }
+            releaseToken?.release()
+            return
+        }
 
-        // Keep the tap callback's refcon pointer valid until any in-flight callback finishes
-        let monitor = self
         CFRunLoopPerformBlock(runLoop, CFRunLoopMode.commonModes as CFTypeRef) {
+            if let eventTap, CFMachPortIsValid(eventTap) {
+                CFMachPortInvalidate(eventTap)
+            }
             CFRunLoopRemoveSource(runLoop, runLoopSource, .commonModes)
-            _ = monitor
+            releaseToken?.release()
         }
         CFRunLoopWakeUp(runLoop)
     }

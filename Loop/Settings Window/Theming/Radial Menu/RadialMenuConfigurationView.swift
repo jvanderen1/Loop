@@ -10,13 +10,13 @@ import Luminare
 import SwiftUI
 
 struct RadialMenuConfigurationView: View {
-    @EnvironmentObject private var windowModel: SettingsWindowManager
     @Environment(\.luminareAnimation) private var luminareAnimation
+    @EnvironmentObject private var windowModel: SettingsWindowManager
 
     @Default(.radialMenuVisibility) private var radialMenuVisibility
     @Default(.radialMenuCornerRadius) private var radialMenuCornerRadius
     @Default(.radialMenuThickness) private var radialMenuThickness
-    @Default(.enableRadialMenuCustomization) var enableRadialMenuCustomization
+    @Default(.enableRadialMenuCustomization) private var enableRadialMenuCustomization
     @Default(.radialMenuActions) private var radialMenuActions
     @State private var selectedRadialMenuActions: Set<RadialMenuAction> = []
 
@@ -65,11 +65,11 @@ struct RadialMenuConfigurationView: View {
                     String(localized: "Left-click to step through cycle actions.", comment: "Section footer shown in settings")
                 ) {
                     LuminareButtonRow {
-                        Button("Add") {
+                        Button(String(localized: "Add", comment: "Used to add items to a list")) {
                             radialMenuActions.insert(.custom(.init(.noAction)), at: 0)
                         }
 
-                        Button("Remove", role: .destructive) {
+                        Button(String(localized: "Remove", comment: "Used to remove items from a list"), role: .destructive) {
                             radialMenuActions.removeAll(where: selectedRadialMenuActions.contains)
                         }
                         .disabled(selectedRadialMenuActions.isEmpty)
@@ -88,15 +88,11 @@ struct RadialMenuConfigurationView: View {
                             moveDown: { moveAction(action.wrappedValue, down: true) }
                         )
                     } emptyView: {
-                        HStack {
-                            Spacer()
-                            VStack {
-                                Text("No radial menu actions")
-                                    .font(.title3)
-                                Text("Press \"Add\" to add an action")
-                                    .font(.caption)
-                            }
-                            Spacer()
+                        VStack {
+                            Text("No radial menu actions")
+                                .font(.title3)
+                            Text("Press \"Add\" to add an action")
+                                .font(.caption)
                         }
                         .foregroundStyle(.secondary)
                         .padding()

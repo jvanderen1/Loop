@@ -8,12 +8,19 @@
 import SwiftUI
 
 final class WallpaperImageFetcher {
+    /// Bundle identifier for the wallpaper window process
+    /// On macOS 27 and later, the wallpaper window is not owned by the dock but rather the window manager.
+    private static let wallpaperOwnerBundleIDs: Set<String> = [
+        "com.apple.dock",
+        "com.apple.WindowManager"
+    ]
+
     /// Takes a screenshot of the main display.
     /// - Returns: An NSImage of the screenshot or nil if the operation fails.
     ///
     /// This method attempts to capture the desktop wallpaper using three approaches:
-    /// 1. First, it tries to find and capture the Dock's wallpaper window directly that matches our screen dimensions
-    /// 2. If that fails, it tries to capture any wallpaper window from the Dock (even if not on our exact screen)
+    /// 1. First, it tries to find and capture the system wallpaper window directly that matches our screen dimensions
+    /// 2. If that fails, it tries to capture any system wallpaper window  (even if not on our exact screen)
     /// 3. As a last resort, it falls back to capturing the entire screen
     ///
     /// The direct wallpaper capture is preferred as it gets only the wallpaper without desktop icons,
@@ -24,13 +31,13 @@ final class WallpaperImageFetcher {
         let screen = NSScreen.screenWithMouse ?? NSScreen.main ?? NSScreen.screens[0]
         let screenFrame = screen.displayBounds
 
-        // First try to get the wallpaper window from the Dock app that matches our screen dimensions
-        if let wallpaperImage = try? await captureWallpaperFromDock(screenFrame: screenFrame, matchFrame: true) {
+        // First try to get the wallpaper window from the system that matches our screen dimensions
+        if let wallpaperImage = try? await captureSystemWallpaper(screenFrame: screenFrame, matchFrame: true) {
             return wallpaperImage
         }
 
-        // Second fallback: try to get any wallpaper window from the Dock, regardless of screen dimensions
-        if let anyWallpaperImage = try? await captureWallpaperFromDock(screenFrame: screenFrame, matchFrame: false) {
+        // Second fallback: try to get any wallpaper window, regardless of screen dimensions
+        if let anyWallpaperImage = try? await captureSystemWallpaper(screenFrame: screenFrame, matchFrame: false) {
             return anyWallpaperImage
         }
 
@@ -42,22 +49,30 @@ final class WallpaperImageFetcher {
         throw WallpaperProcessorError.screenshotFailed
     }
 
-    /// Attempts to capture the wallpaper window from the Dock app.
+    /// Attempts to capture the wallpaper window from the Dock or WindowManager.
     /// - Parameters:
     ///   - screenFrame: The frame of the screen to capture.
     ///   - matchFrame: Whether to match the exact screen frame dimensions or get any wallpaper window.
     /// - Returns: An NSImage of the wallpaper or nil if the operation fails.
     ///
-    /// This approach uses window capturing APIs to specifically target the Dock's wallpaper window.
+    /// This approach uses window capturing APIs to specifically target the systems wallpaper window.
     /// It requires appropriate permissions, but provides the cleanest capture of just the wallpaper.
-    /// The method identifies the wallpaper window by filtering window properties from the Dock process.
-    private func captureWallpaperFromDock(screenFrame: CGRect, matchFrame: Bool) async throws -> NSImage? {
-        // Get all windows and filter for the Dock's wallpaper windows
+    /// The method identifies the wallpaper window by filtering window properties from the Dock/WindowManager process.
+    private func captureSystemWallpaper(screenFrame: CGRect, matchFrame: Bool) async throws -> NSImage? {
+        // Get all windows and filter for the wallpaper windows
         let windows = CGWindowListCopyWindowInfo(.optionAll, kCGNullWindowID) as! [[CFString: Any]]
         var wallpaperWindows = windows
-            .filter { $0[kCGWindowOwnerName] as? String == "Dock" }
+            .filter { window in
+                guard let pid = window[kCGWindowOwnerPID] as? pid_t,
+                      let bundleIdentifier = NSRunningApplication(processIdentifier: pid)?.bundleIdentifier
+                else {
+                    return false
+                }
+                return Self.wallpaperOwnerBundleIDs.contains(bundleIdentifier)
+            }
             .filter { ($0[kCGWindowName] as? String ?? "").contains("Wallpaper") }
             .filter { $0[kCGWindowIsOnscreen] as? Int == 1 }
+            .filter { ($0[kCGWindowLayer] as? Int ?? 0) <= CGWindowLevelForKey(.desktopWindow) }
 
         // Apply additional frame filtering only if matchFrame is true
         if matchFrame {

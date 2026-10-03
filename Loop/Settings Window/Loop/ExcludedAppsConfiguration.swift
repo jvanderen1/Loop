@@ -17,11 +17,11 @@ struct ExcludedAppsConfigurationView: View {
         LuminareForm {
             LuminareSection {
                 LuminareButtonRow {
-                    Button("Add") {
+                    Button(String(localized: "Add", comment: "Used to add items to a list")) {
                         showAppChooser()
                     }
 
-                    Button("Remove", role: .destructive) {
+                    Button(String(localized: "Remove", comment: "Used to remove items from a list"), role: .destructive) {
                         excludedApps.removeAll { selectedApps.contains($0) }
                     }
                     .disabled(selectedApps.isEmpty)
@@ -37,15 +37,11 @@ struct ExcludedAppsConfigurationView: View {
                     ExcludedListAppView(url: item.wrappedValue)
                         .equatable()
                 } emptyView: {
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("No excluded applications")
-                                .font(.title3)
-                            Text("Press \"Add\" to add an application")
-                                .font(.caption)
-                        }
-                        Spacer()
+                    VStack {
+                        Text("No excluded applications")
+                            .font(.title3)
+                        Text("Press \"Add\" to add an application")
+                            .font(.caption)
                     }
                     .foregroundStyle(.secondary)
                     .padding()

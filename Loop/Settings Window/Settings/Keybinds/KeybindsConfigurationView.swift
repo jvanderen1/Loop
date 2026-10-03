@@ -27,6 +27,7 @@ struct KeybindsConfigurationView: View {
     @Default(.doubleClickToTrigger) private var doubleClickToTrigger
     @Default(.middleClickTriggersLoop) private var middleClickTriggersLoop
     @Default(.enableTriggerDelayOnMiddleClick) private var enableTriggerDelayOnMiddleClick
+    @Default(.hideOnNoSelectionForKeybinds) private var hideOnNoSelectionForKeybinds
     @Default(.keybinds) private var keybinds
 
     /// If the user has "enabled" the trigger delay.
@@ -83,6 +84,11 @@ struct KeybindsConfigurationView: View {
                 suffix: Text("s", comment: "Unit symbol: seconds")
             )
 
+            LuminareToggle(
+                String(localized: "Hide when no action is selected", comment: "Toggle to hide the radial menu whenever no action is selected"),
+                isOn: $hideOnNoSelectionForKeybinds
+            )
+
             LuminareToggle("Double-click to trigger", isOn: $doubleClickToTrigger)
             LuminareToggle("Middle-click to trigger", isOn: $middleClickTriggersLoop)
 
@@ -110,11 +116,11 @@ struct KeybindsConfigurationView: View {
     private var keybindsSection: some View {
         LuminareSection(String(localized: "Keybinds", comment: "Section header shown in settings")) {
             LuminareButtonRow {
-                Button("Add") {
+                Button(String(localized: "Add", comment: "Used to add items to a list")) {
                     keybinds.insert(.init(.noAction), at: 0)
                 }
 
-                Button("Remove", role: .destructive) {
+                Button(String(localized: "Remove", comment: "Used to remove items from a list"), role: .destructive) {
                     keybinds.removeAll(where: model.selectedKeybinds.contains)
                 }
                 .disabled(model.selectedKeybinds.isEmpty)
@@ -130,15 +136,11 @@ struct KeybindsConfigurationView: View {
                 KeybindItemView(keybind)
                     .environmentObject(model)
             } emptyView: {
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("No keybinds")
-                            .font(.title3)
-                        Text("Press \"Add\" to add a keybind")
-                            .font(.caption)
-                    }
-                    Spacer()
+                VStack {
+                    Text("No keybinds")
+                        .font(.title3)
+                    Text("Press \"Add\" to add a keybind")
+                        .font(.caption)
                 }
                 .foregroundStyle(.secondary)
                 .padding()

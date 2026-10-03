@@ -11,6 +11,9 @@ struct CycleActionCoordinator {
     enum SelectionMode {
         case advance(CycleProgressStore.Direction)
         case selectCurrent
+        /// Like `selectCurrent`, but coming from outside the cycle resumes this session's progress.
+        /// Used by gestures, where moving back into an already visited action shouldn't move on in its cycle.
+        case resumeCurrent
     }
 
     struct Proposal {
@@ -34,6 +37,12 @@ struct CycleActionCoordinator {
         let currentActionBelongsToCycle = cycleAction.cycle?.contains {
             $0.id == currentAction.id
         } == true
+        let isInsideCycle = currentActionBelongsToCycle || Self.isRepeatingLongerKeybind(
+            currentAction: currentAction,
+            currentParentAction: currentParentAction,
+            keybindSequenceOriginAction: keybindSequenceOriginAction,
+            in: cycleAction
+        )
         let restartAtBeginning = Self.shouldRestartAtBeginning(
             whenEnabled: restartAtBeginningWhenInterrupted,
             currentAction: currentAction,
@@ -41,29 +50,30 @@ struct CycleActionCoordinator {
             keybindSequenceOriginAction: keybindSequenceOriginAction,
             in: cycleAction
         )
-        let seedAction: WindowAction? = if restartAtBeginning {
-            nil
-        } else if currentActionBelongsToCycle {
-            currentAction
+
+        // Inside the cycle, progress continues from this session. Entering it starts from the window's recorded
+        // progress, except for gestures moving back into an action they already visited.
+        let origin: CycleProgressStore.Origin = if isInsideCycle {
+            .sessionProgress(fallback: currentActionBelongsToCycle ? currentAction : nil)
+        } else if case .resumeCurrent = mode {
+            .sessionProgress(fallback: nil)
         } else {
-            recordedAction
+            .action(restartAtBeginning ? nil : recordedAction)
         }
-        let selection: CycleProgressStore.Selection? = switch mode {
-        case let .advance(direction):
-            progressStore.proposeSelection(
-                for: targetWindowID,
-                in: cycleAction,
-                seededBy: seedAction,
-                restartAtBeginning: restartAtBeginning,
-                direction: direction
-            )
-        case .selectCurrent:
-            progressStore.proposeCurrentSelection(
-                for: targetWindowID,
-                in: cycleAction,
-                seededBy: currentActionBelongsToCycle ? currentAction : nil
-            )
+
+        // Selecting a cycle from outside shows what advancing into it would select
+        let direction: CycleProgressStore.Direction? = switch mode {
+        case let .advance(direction): direction
+        case .selectCurrent: isInsideCycle ? nil : .forward
+        case .resumeCurrent: nil
         }
+
+        let selection = progressStore.proposeSelection(
+            for: targetWindowID,
+            in: cycleAction,
+            from: origin,
+            moving: direction
+        )
 
         guard let selection else {
             return nil
@@ -107,10 +117,12 @@ struct CycleActionCoordinator {
         keybindSequenceOriginAction: WindowAction?,
         in cycleAction: WindowAction
     ) -> Bool {
-        let currentKeybind = currentParentAction?.keybind ?? currentAction.keybind
-        let isRepeatingLongerKeybind = keybindSequenceOriginAction?.id == cycleAction.id
-            && !currentKeybind.isEmpty
-            && currentKeybind.isStrictSubset(of: cycleAction.keybind)
+        let isRepeatingLongerKeybind = isRepeatingLongerKeybind(
+            currentAction: currentAction,
+            currentParentAction: currentParentAction,
+            keybindSequenceOriginAction: keybindSequenceOriginAction,
+            in: cycleAction
+        )
 
         return isEnabled && (
             !isRepeatingLongerKeybind && (
@@ -118,5 +130,18 @@ struct CycleActionCoordinator {
                     cycleAction.cycle?.contains { $0.id == currentAction.id } != true
             )
         )
+    }
+
+    /// Holding a shorter keybind while repeating the cycle's longer one briefly selects the shorter action first
+    private static func isRepeatingLongerKeybind(
+        currentAction: WindowAction,
+        currentParentAction: WindowAction?,
+        keybindSequenceOriginAction: WindowAction?,
+        in cycleAction: WindowAction
+    ) -> Bool {
+        let currentKeybind = currentParentAction?.keybind ?? currentAction.keybind
+        return keybindSequenceOriginAction?.id == cycleAction.id
+            && !currentKeybind.isEmpty
+            && currentKeybind.isStrictSubset(of: cycleAction.keybind)
     }
 }
