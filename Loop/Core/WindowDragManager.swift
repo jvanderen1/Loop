@@ -122,8 +122,9 @@ final class WindowDragManager {
         }
 
         monitor.start()
-        // Mouse-up can end the session while the tap is being created.
-        guard session == dragSession else {
+        // Mouse-up can end the session while the tap is being created. A failed tap must not
+        // stick around, or later drag events will skip trying again.
+        guard session == dragSession, monitor.isEnabled else {
             monitor.stop()
             return
         }
